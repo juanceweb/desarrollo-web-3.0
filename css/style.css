@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+
+/* -------------------------MARGEN DE TODA LA PAG----------------------------*/
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*---------------------------------BOTONES-----------------------------------*/
+
+input[type="mail"]:focus {
+  background-color: rgba(100, 9, 9, 0.8);
+}
+
+.input {
+  background-color: rgba(200, 9, 9, 0.8);
+  font-size: 1rem;
+  font-weight: bold;
+  width: 25vw;
+  height: 5vh;
+  padding-left: 1rem;
+  color: white;
+  border: 2px solid;
+  border-radius: 0.2rem;
+  outline: none;
+  border: 2px solid rgba(100, 9, 9, 0.8);
+}
+
+.boton {
+  background-color: rgba(200, 9, 9, 0.8);
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem 5rem;
+  margin: 0.5rem 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5rem;
+}
+
+/*----------------------------------OTROS------------------------------------*/
+.backRed {
+  background-color: rgba(245, 9, 9, 0.8);
+}
+
+.backBlack {
+  background-color: black;
+}
+
+.backGrey {
+  background-color: lightgrey;
+}
+
+.backBrown {
+  background-color: rgb(56, 43, 32);
+}
+
+.backViolet {
+  background-color: violet;
+}
+
+/* ------------------------------------FLEX--------------------------------*/
+
+.order1 {
+  order: 1;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.flexBasis {
+  flex-basis: 100%;
+}
+
+.flexBasis20 {
+  flex-basis: 20%;
+}
+
+.flexBasis80 {
+  flex-basis: 80%;
+}
+
+.flexBasis50 {
+  flex-basis: 50%;
+}
+
+.justifyLeft {
+  justify-content: flex-start;
+}
+
+.justifyRight {
+  justify-content: flex-end;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}
+
+.justifyBet {
+  justify-content: space-between;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+.flexColumns {
+  flex-direction: column;
+}
+/* --------------------------------- */
+
+.height40 {
+  height: 40vh;
+}
+
+.height80 {
+  height: 80vh;
+}
+
+.height35 {
+  height: 35rem;
+  background-color: lightgray;
+}
+
+/*-----------------------------------BOTONERAS------------------------------------------*/
+
+nav {
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 0;
+  position: relative;
+}
+
+nav ul ul {
+  position: absolute;
+  display: none;
+  background-color: rgba(245, 9, 9, 0.8);
+}
+
+    nav ul ul li {
+      display: block;
+      line-height: 1.5rem;
+    }
+
+.subNav {
+  font-size: 1rem;
+}
+
+nav ul li:hover ul {
+  display: block;
+  padding: 1rem;
+}
+
+nav ul li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 1.2rem;
+}
+
+nav ul li a:hover {
+  cursor: pointer;
+}
+
+/* --------------------------------------- FOOTERS-------------------------------------*/
+footer {
+  color: coral;
+  padding: 1rem;
+}
+
+    footer ul li {
+      list-style-type: none;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+        footer ul li a {
+          text-decoration: none;
+          color: coral;
+        }
+
+.distanciaFooter {
+  padding-left: 1rem;
+}
+
+/*---------------------------------PAGINA DE INDEX-------------------------------------*/
+
+/*--------------IMAGEN CARRUSEL------------------*/
+
+.imgCarrusel {
+  height: 65vh;
+  background-image: url(../media/inicial_tienda_online.jpg);
+  background-size: cover;
+}
+
+.textHeading {
+  font-family: "Montserrat", sans-serif;
+  color: violet;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*-------------REGISTRO DE USUARIO----------------*/
+.registro {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2.5rem;
+  padding: 4rem;
+}
+
+/*---------------CATEGORIAS EN INDEX---------------*/
+.productos {
+  background-image: url(../media/camisetas_cat.jpg);
+  background-size: cover;
+}
+
+.lenceria {
+  background-image: url(../media/corpiños_cat.jpg);
+  background-size: cover;
+}
+
+.batas {
+  background-image: url(../media/batas_cat.jpg);
+  background-size: cover;
+}
+
+.formato {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 28rem;
+  height: 30vh;
+  margin: 5rem;
+  border-width: 0.2rem;
+}
+
+/*---------------------------------TIENDA ONLINE--------------------------------------*/
+
+.imgTiendaOnline {
+  height: 50vh;
+  background-image: url(../media/todos_cat.jpg);
+  background-size: cover;
+}
+
+/*-----------TABLAS--------------*/
+.tabla {
+  color: rgb(225, 0, 255);
+}
+
+.noList {
+  list-style-type: none;
+  text-align: center;
+}
+
+/*------BOTONERA SECUNDARIA------*/
+
+.secondNavA {
+  font-size: 1rem;
+}
+
+.secondNavLi {
+  margin-top: 2rem;
+}
+
+/*----------------------------------QUIENES SOMOS-------------------------------------*/
+
+.formatoQuienes {
+  padding: 5vh 5vw;
+  font-size: 1.5rem;
+}
+
+/*---------HEADERS-------------*/
+.headers {
+  color: green;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 6rem;
+  background-color: lightgray;
+}
+
+/* ----------CONTACTO-------------*/
+.contacto {
+  height: 40rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.5rem;
+  background-image: url(../media/fondo_face.jpg);
+  background-size: cover;
+  color: black;
+}
+
+/*----------PREGUNTAS FRECUENTES----------*/
+
+.questionFlavor {
+  color: darkslateblue;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  line-height: 5rem;
+  text-transform: uppercase;
+}
+
+/*---------------------------QUIENES SOMOS----------------------*/
+
+.imgQuienes {
+  width: 15vw;
+}
+
+.imgQuienes2 {
+  width: 15vw;
+}
+
+.vision {
+  background-image: url(../media/mision.png);
+  background-size: cover;
+}
+
+.mision {
+  background-image: url(../media/vision.png);
+  background-size: cover;
+}
+
+.formatoVM {
+  width: 30vw;
+  height: 35vh;
+  margin: 2rem;
+  color: white;
+  font-size: 1.8rem;
+  text-align: center;
+}

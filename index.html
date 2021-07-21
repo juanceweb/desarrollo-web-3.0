@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Lenceria Maria Maria</title>
+</head>
+<body>
+    
+    <nav class="backRed displayFlex alignCenter">
+        <a href="./index.html"><img src="./media/logo - borde.png" alt=""></a>
+        <ul class="displayFlex flexBasis justifyRight">
+            <li><a href="./pages/quienes_somos.html">¿quienes somos?</a></li>
+            <li><a href="./pages/tienda_online.html">tienda online</a>
+                <ul>
+                    <li><a class=subNav href="">Categoria 1</a></li>
+                    <li><a class=subNav href="">Categoria 2</a></li>
+                </ul>
+            </li>
+            <li><a href="./pages/preguntas.html">preguntas frecuentes</a></li>
+            <li><a href="./pages/tabla_talles.html">tabla de talles</a></li>
+            <li><a href="./pages/contacto.html">contacto</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+
+    <header class="displayFlex justifyCenter alignCenter imgCarrusel">
+        <h1 class="textHeading">bienvenidos a la tienda de ropa</h1>
+    </header>
+
+    <hr>
+
+    <section class="backRed registro displayFlex justifyCenter alignCenter">
+        <form action="envio.php" method="post">
+            <label>
+                <h2>sumate a nuestra comunidad</h2>
+                <p>Con tu registro accedes a descuentos y futuras promociones!</p>
+                <input class="input" type="mail" name="email" placeholder="mail@algo.com" size=30>
+            </label>
+            <input class="boton" type="submit" value="Unirse">
+        </form>
+    </section>
+
+    <hr>
+
+    <section class="displayFlex justifyEvenly flexWrap backGrey">
+        <article class="displayFlex justifyCenter alignCenter">
+            <input class="productos formato" type="button" value="productos">
+        </article>
+        <article class="displayFlex justifyCenter alignCenter">
+            <input class="lenceria formato" type="button" value="lenceria">
+        </article>
+        <article class="displayFlex justifyCenter alignCenter">
+            <input class="batas formato" type="button" value="batas">
+        </article>
+    </section>
+
+    <hr>
+
+    <footer class="backBlack">
+        <ul class="displayFlex justifyBet">
+            <li>Seguinos en:
+                <ul class="displayFlex">
+                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="./media/face-48.png" alt="facebook"></a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="./media/insta-48.png" alt="instagram"></a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="./media/youtu-48.png" alt="youtube"></a></li>
+                </ul>
+            </li>
+            <li>Copyright © 2021 lenceriamariamaria - Todos los derechos reservados.</li>
+            <li>9 de Julio 79, Bernal, Buenos Aires</li>
+        </ul>
+        <ul class="displayFlex justifyCenter">
+            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Tienda Online</a></li>
+            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Preguntas Frecuentes</a></li>
+            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Contacto</a></li>
+            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Boton de Arrepentimiento</a></li>
+            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Politica de cambio</a></li>
+            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Terminos y condiciones</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
