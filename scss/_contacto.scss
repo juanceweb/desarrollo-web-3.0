@@ -1,0 +1,84 @@
+.sectionContacto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    article {
+      width: 50%;
+    }
+  }
+}
+
+.contacto {
+  background-image: url(../media/spring.png);
+}
+
+.contacto__formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: groove 4px black;
+  color: white;
+  margin: 0.5em;
+  textarea {
+    margin: 0.5rem 10% 0.5rem 10%;
+  }
+  article {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    text-align: center;
+    color: black;
+  }
+  div {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, auto);
+    padding: 0.5rem;
+    grid-row-gap: 0.5rem;
+    color: black;
+    input {
+      width: 75%;
+    }
+  }
+}
+
+.contacto__formulario--bg {
+  background-image: url(../media/sativa.png);
+}
+
+#select {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.selectWidth {
+  width: 25%;
+}
+
+.informacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0.5rem;
+  background: rgb(80, 80, 80);
+}
+
+.mapa {
+  margin: 0.5rem;
+  height: 25rem;
+  @media screen and (min-width: 1200px) {
+    height: auto;
+  }
+}
+
+.boton2 {
+  @extend .form__btn;
+  @extend .form__btn--color;
+  background-color: rgb(80, 80, 80);
+}

@@ -1,0 +1,11 @@
+1) agregue descripcion a todas las paginas
+2) agregue titulos descriptivos a todas las paginas
+3) agregue keyword a todas las paginas
+4) agregue autor a todas las paginas
+5) acorte mucho el tamaño de las imagenes de la pagina
+6) cree una pagina de error 404 qeu redirecciona al inicio
+7) cambie los nombres de los html para que se vean bien en la url y tengan sentido
+8) indente correctamente en todos los html
+9) le puse h1 a todas las paginas
+10) les puse h2 a casi todas las paginas
+11) se le completo los "alt", a todas las imagenes de la pagina

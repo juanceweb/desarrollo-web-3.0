@@ -1,0 +1,35 @@
+.sectionPreguntas {
+  padding: 0 15% 0 15%;
+  background-image: url(../media/spring.png);
+  article h4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  article p {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 25% 0 25%;
+    font-size: 1.3rem;
+  }
+}
+
+.sectionPreguntas__h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 2rem;
+  font-family: $fontRara;
+  @media screen and (min-width: 1200px) {
+    font-size: 2.5rem;
+  }
+}
+
+.sectionPreguntas__h3--color {
+  color: red;
+}

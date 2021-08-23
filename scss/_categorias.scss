@@ -1,0 +1,72 @@
+.sectionCategorias {
+  background-image: url(../media/spring.png);
+  border-bottom: groove black 1px;
+}
+
+.SectionCategorias__h2 {
+  text-transform: uppercase;
+  font-family: $fontRara;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  color: red;
+}
+
+.categorias {
+  display: grid;
+  grid-template-areas: ". productos . " " . lenceria ." ". batas .";
+  grid-template-columns: 15% auto 15%;
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: 1.5rem;
+  padding: 1rem 0rem;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 5% 23.5% 19.5% 4% 19.5% 23.5% 5%;
+    grid-template-areas: ". productos productos . lenceria lenceria ." ". . batas batas batas . . ";
+    grid-template-rows: 1fr 1fr;
+  }
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 5% auto 2% auto 2% auto 5%;
+    grid-template-areas: ". productos . lenceria . batas . ";
+    grid-template-rows: 1fr;
+    margin-bottom: 2rem;
+    height: 40vh;
+    align-items: center;
+  }
+}
+
+.categorias__secciones {
+  background-size: cover;
+  height: 20vh;
+  text-transform: uppercase;
+  font-family: $fontRara;
+  font-weight: bold;
+  font-size: 1rem;
+  color: red;
+}
+
+.categorias__secciones--bgProd {
+  grid-area: productos;
+  background-image: url(../media/camisetas_cat.jpg);
+  @media screen and (min-width: 1200px) {
+    height: 30vh;
+    font-size: 1.5rem;
+  }
+}
+
+.categorias__secciones--bgLenc {
+  grid-area: lenceria;
+  background-image: url(../media/corpiños_cat.jpg);
+  @media screen and (min-width: 1200px) {
+    height: 30vh;
+    font-size: 1.5rem;
+  }
+}
+
+.categorias__secciones--bgBata {
+  grid-area: batas;
+  background-image: url(../media/batas_cat.jpg);
+  @media screen and (min-width: 1200px) {
+    height: 30vh;
+    font-size: 1.5rem;
+  }
+}

@@ -1,152 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/movile.css">
+    <title>Lenceria Maria Maria - Tienda Online</title>
+    <meta name="description" content="Encontra todos nuestros productos en nuestra tienda onlina, o en el local ubicado en Bernal, sobre la calle 9 de Julio">
+    <meta name="keywords" content="lenceria, indumentaria, ropa, mujer, corpiño, bombacha, bata, camisetas, pantuflas, maria maria, bernal, medias, monos, local, 9 de julio, comprar, ropa de casa, tienda online, inicio, categorias">
+    <meta name="author" content="juance.com.ar">
 </head>
 <body>
 
-    <nav class="backRed displayFlex alignCenter">
-        <a href="../index.html">
-            <img src="../media/logo - borde.png" alt="">
-        </a>
-        <ul class="displayFlex flexBasis justifyRight">
-            <li>
-                <a href="../pages/quienes_somos.html">¿quienes somos?</a>
-            </li>
-            <li><a href="../pages/tienda_online.html">tienda online</a>
-                <ul>
-                    <li>
-                        <a class=subNav href="">Categoria 1</a>
-                    </li>
-                    <li>
-                        <a class=subNav href="">Categoria 2</a>
-                    </li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"> <img src="../media/logo - borde.png" alt="logo mariamaria"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="quienes_somos.html">Quienes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda_online.html">Tienda Online</a></li>
+                    <li class="nav-item"><a class="nav-link" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tabla_de_talles.html">Tabla de Talles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="../pages/preguntas.html">preguntas frecuentes</a>
-            </li>
-            <li>
-                <a href="../pages/tabla_talles.html">tabla de talles</a>
-            </li>
-            <li>
-                <a href="../pages/contacto.html">contacto</a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </nav>
 
-    <hr>
-
-    <header class="displayFlex justifyCenter alignCenter imgTiendaOnline">
-        <h1 class="textHeading">todas las categorias</h1>
+    <header class=bgHeroeTienda>
+        <h1 class="d-flex justify-content-center bgHeroe__format bgHeroe__format--font bgHeroe__format--color">Tienda Online</h1>
     </header>
     
-    <hr>
-
-    <section class="backRed registro displayFlex justifyCenter alignCenter">
+    <section class="form bgGradient">
         <form action="envio.php" method="post">
             <label>
-                <h2>sumate a nuestra comunidad</h2>
+                <h3>sumate a nuestra comunidad</h3>
                 <p>Con tu registro accedes a descuentos y futuras promociones!</p>
-                <input class="input" type="mail" name="email" placeholder="mail@algo.com" size=30>
-            </label>
-            <input class="boton" type="submit" value="Unirse">
+                <input class="form__mail form__input--color" type="mail" name="email" placeholder="mail@algo.com" size=30>
+                <input class="form__btn form__btn--color" type="submit" value="Unirse">
+            </label>            
         </form>
     </section>
 
-    <hr>
-
-    <section class="displayFlex height80">
-        <aside class="backBrown displayFlex flexBasis20">
-            <nav>
-                <ul>
-                    <li class=secondNavLi><a class=secondNavA href="">todos los productos</a></li>
-                    <li class=secondNavLi><a class=secondNavA href="">camisones</a></li>
-                    <li class=secondNavLi><a class=secondNavA href="">pijamas</a></li>
-                    <li class=secondNavLi><a class=secondNavA href="">batas/monos</a></li>
-                    <li class=secondNavLi><a class=secondNavA href="">camisetas</a></li>
-                    <li class=secondNavLi><a class=secondNavA href="">ropa interior</a></li>
-                    <li class=secondNavLi><a class=secondNavA href="">medias</a></li>
-                    <li class=secondNavLi><a class=secondNavA href="">pantuflas</a></li>
+    <section class=tiendaNav>
+        <nav class="navbar navbar-expand-xl navbar-dark bgGradientBlack d-flex flex-column tienda__aside--nav">
+            <div class="container-fluid justify-content-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent2">
+                    <ul class="nav secondNav">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Todos los Productos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Camisones</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Pijamas</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Batas/Mono</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Camisetas</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Ropa Interior</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Medias</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Pantuflas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="sectionArt w-100">
+            <h2 class=SectionCategorias__h2 id=cat>todos los productos</h2>
+            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art1>
+                <img class=" border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Azul.jpeg" alt="bata azul" width="100%">
+                <h3>Bata Clasica Azul</h3>
+                <input class=boton type="submit" value="comprar">
+            </article>
+            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art2>
+                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Gris.jpeg" alt="bata gris" width="100%">
+                <h3>Bata Clasica Gris</h3>
+                <input class=boton type="submit" value="comprar">
+            </article>
+            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art3>
+                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Rojo.jpeg" alt="bata roja" width="100%">
+                <h3>Bata Clasica Roja</h3>
+                <input class=boton type="submit" value="comprar">
+            </article>
+            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art4>
+                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Rosa.jpeg" alt="bata rosa" width="100%">
+                <h3>Bata Clasica Rosa</h3>
+                <input class=boton type="submit" value="comprar">
+            </article>
+            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art5>
+                <img class=" border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/bata clasica - uva.jpg" alt="bata uva" width="100%">
+                <h3>Bata Clasica Uva</h3>
+                <input class=boton type="submit" value="comprar">
+            </article>
+            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art6>
+                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Magenta.jpeg" alt="bata magenta" width="100%">
+                <h3>Bata Clasica Magenta</h3>
+                <input class=boton type="submit" value="comprar">
+            </article>
+            <nav aria-label="Page navigation example" id=pag>
+                <ul class="pagination paginationMia justify-content-center py-3">
+                    <li class="page-item p-1 border border-2"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item p-1 border border-2"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item p-1 border border-2"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item p-1 border border-2"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item p-1 border border-2"><a class="page-link" href="#">Siguiente</a></li>
                 </ul>
             </nav>
-        </aside>
-        <div class="displayFlex flexBasis80 justifyCenter alignCenter backGrey">
-            <table border="1" cellpadding="10px" cellspacing="5px" class=tabla>
-                <thead>
-                    <tr>
-                        <th>PRODUCTO</th>
-                        <th>PRECIO</th>
-                        <th>CARACTERISTICAS</th>
-                        <th>STOCK</th>
-                    </tr>
-                </thead>
-                <tbody class=noList>
-                    <tr>
-                        <td>Remera</td>
-                        <td>100</td>
-                        <td>
-                            <ol class=noList>
-                                <li>70% algodon</li>
-                                <li>30% poliester</li>
-                            </ol>
-                        </td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Pantalon</td>
-                        <td>150</td>
-                        <td>
-                            <ol class=noList>
-                                <li>90% algodon</li>
-                                <li>10% poliester</li>
-                            </ol>
-                        </td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>Media</td>
-                        <td>50</td>
-                        <td>
-                            <ol class=noList>
-                                <li>60% algodon</li>
-                                <li>40% poliester</li>
-                            </ol>
-                        </td>
-                        <td>30</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </section>
-    
-    <hr>
 
-    <footer class="backBlack">
-        <ul class="displayFlex justifyBet">
-            <li>Seguinos en:
-                <ul class="displayFlex">
+    <footer class="bg-dark footer">
+        <ul class=ulTop>
+            <li>Copyright © 2021 lenceriamariamaria - Todos los derechos reservados.</li>
+            <li class="ulTop__formato ulTop__formato--padding">
+                <ul class=redes>
                     <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/face-48.png" alt="facebook"></a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/insta-48.png" alt="instagram"></a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/youtu-48.png" alt="youtube"></a></li>
                 </ul>
             </li>
-            <li>Copyright © 2021 lenceriamariamaria - Todos los derechos reservados.</li>
             <li>9 de Julio 79, Bernal, Buenos Aires</li>
         </ul>
-        <ul class="displayFlex justifyCenter">
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Tienda Online</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Preguntas Frecuentes</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Contacto</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Boton de Arrepentimiento</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Politica de cambio</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Terminos y condiciones</a></li>
+        <ul class=footerNav>
+            <li class="footerNav__formato footerNav__formato--font"><a href="../index.html">Inicio</a></li>
+            <li class="footerNav__formato footerNav__formato--font"><a href="tienda_online.html ">Tienda Online</a></li>
+            <li class="footerNav__formato footerNav__formato--font"><a href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+            <li class="footerNav__formato footerNav__formato--font noRightBorder"><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <ul class=footerNav>
+            <li class="footerNav__formato footerNav__formato--font"><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Boton de Arrepentimiento</a></li>
+            <li class="footerNav__formato footerNav__formato--font"><a href="politicas_de_privacidad.html" target="_blank">Politicas de Privacidad</a></li>
+            <li class="footerNav__formato footerNav__formato--font noRightBorder"><a href="terminos_y_condiciones.html" target="_blank">Terminos y condiciones</a></li>
         </ul>
     </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,146 @@
+.quienesSomos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  background-image: url(../media/spring.png);
+}
+
+.quienesSomosArticle {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: solid 2px red;
+  h4 {
+    text-transform: uppercase;
+    color: red;
+    font-family: $fontRara;
+    padding: 1rem 0rem;
+  }
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 5rem 12rem;
+    align-content: center;
+  }
+}
+
+.quienesSomos__img {
+  height: 30vh;
+  border: groove;
+}
+
+.VisionMision {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h4 {
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.VisionMision__vision {
+  background-image: url(../media/mision.jpg);
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 10% 1% 10%;
+  padding: 0 1rem 0 1rem;
+  font-weight: bold;
+  @media screen and (min-width: 768px) {
+    height: 40vh;
+    margin: 5% 0.5rem 5% 20%;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 1.3rem;
+  }
+}
+
+.VisionMision__vision--color {
+  color: rgba(200, 9, 9, 1);
+}
+
+.VisionMision__mision {
+  background-image: url(../media/vision.jpg);
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 10% 5% 10%;
+  padding: 0 1rem 0 1rem;
+  font-weight: bold;
+  @media screen and (min-width: 768px) {
+    height: 40vh;
+    margin: 5% 20% 5% 0.5rem;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 1.3rem;
+  }
+}
+
+.VisionMision__mision--color {
+  color: rgba(200, 9, 9, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .quienesSomosArticle__foto {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .quienesSomosArticle__fotoInv {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .quienesSomosArticle__titulo {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .quienesSomosArticle__tituloInv {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .quienesSomosArticle__texto {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .quienesSomosArticle__textoInv {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}

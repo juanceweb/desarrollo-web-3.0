@@ -1,126 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/movile.css">
+    <title>Lenceria Maria Maria - Contacto</title>
+    <meta name="description" content="Pagina de contacto de Lenceria Maria Maria, para que se contacten con nosotros, y nuesta ubicacion">
+    <meta name="keywords" content="lenceria, indumentaria, ropa, mujer, corpiño, bombacha, bata, camisetas, pantuflas, maria maria, bernal, medias, monos, local, 9 de julio, comprar, ropa de casa, tienda online, inicio, categorias">
+    <meta name="author" content="juance.com.ar">
 </head>
 <body>
 
-    <nav class="backRed displayFlex alignCenter">
-        <a href="../index.html">
-            <img src="../media/logo - borde.png" alt="">
-        </a>
-        <ul class="displayFlex flexBasis justifyRight">
-            <li>
-                <a href="../pages/quienes_somos.html">¿quienes somos?</a>
-            </li>
-            <li><a href="../pages/tienda_online.html">tienda online</a>
-                <ul>
-                    <li>
-                        <a class=subNav href="">Categoria 1</a>
-                    </li>
-                    <li>
-                        <a class=subNav href="">Categoria 2</a>
-                    </li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"> <img src="../media/logo - borde.png" alt="logo mariamaria"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="quienes_somos.html">Quienes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda_online.html">Tienda Online</a></li>
+                    <li class="nav-item"><a class="nav-link" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tabla_de_talles.html">Tabla de Talles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="../pages/preguntas.html">preguntas frecuentes</a>
-            </li>
-            <li>
-                <a href="../pages/tabla_talles.html">tabla de talles</a>
-            </li>
-            <li>
-                <a href="../pages/contacto.html">contacto</a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </nav>
     
-    <section class=contacto>
-        <form action="envio.php" method="post"> 
-            <div>
-                <h3>CONTACTO</h3>
-                <label>Nombre
-                    <input type="text" name="nombre" placeholder="Nombre" size=15>
-                </label>
-                <label>Apellido
-                    <input type="text" name="apellido" placeholder="Apellido" size=15>
-                </label>
-            </div>
-            <div>
-                <label>Email
-                    <input type="email" name="email" placeholder="mail@ejemplo.com" size=30>
-                </label>
-            </div>
+    <header class=bgHeroe>
+        <h1 class="d-flex justify-content-center bgHeroe__format bgHeroe__format--font bgHeroe__format--color">Contacto</h1>
+    </header>
 
-            <div>
-                <h3>SEXO</h3>
-                <label for="sexo">Mujer</label>
-                <input type="radio" name="sexo" value="M">
-                <label for="sexo">Hombre</label>
-                <input type="radio" name="sexo" value="H">
-            </div>
-
-            <div>
-                <h3>RAZON DE CONTACTO</h3>
-                <select name="razon" id="">
-                    <option value="1">PAGO</option>
-                    <option value="2">PEDIDO</option>
-                    <option value="3">DUDAS</option>
-                </select>
-            </div>
-
-            <div>
-                <h3>MENSAJE</h3>
-                <textarea name="" id="" cols="120" rows="10" placeholder="Ingrese su mensaje aqui"></textarea>
-            </div>
-
-            <div>
-                <h3>INFORMACION</h3>
-                <label for="1">Confirmo haber leido los terminos y condiciones
-                    <input type="checkbox" name="registro" value="1">
-                </label>
-            </div>
-
-            <div> 
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Cancelar">
-            </div>
-        </form>
+    <section class="sectionContacto bg-danger">
+        <article class=contacto>
+            <form class="contacto__formulario contacto__formulario--bg" action="envio.php" method="post">
+                    <h3 class=informacion>CONTACTO</h3>
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" placeholder="Nombre">
+                        <label>Apellido</label>
+                        <input type="text" name="apellido" placeholder="Apellido">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="mail@ejemplo.com">
+                    </div>
+                    <h3 class=informacion>SEXO</h3>
+                    <div>
+                        <label for="sexo">Mujer</label>
+                        <input type="radio" name="sexo" value="M">
+                        <label for="sexo">Hombre</label>
+                        <input type="radio" name="sexo" value="H">
+                    </div>
+                    <h3 class=informacion>RAZON DE CONTACTO</h3>
+                    <div id=select>
+                        <select class=selectWidth name="razon" id="">
+                            <option value="1">PAGO</option>
+                            <option value="2">PEDIDO</option>
+                            <option value="3">DUDAS</option>
+                        </select>
+                    </div>
+                    <h3 class=informacion>MENSAJE</h3>
+                        <textarea name="" class=mensajeTexto cols="120" rows="10" placeholder="Ingrese su mensaje aqui"></textarea>
+                    <h3 class=informacion>INFORMACION</h3>
+                    <article>
+                        <label for="1">Confirmo haber leido los terminos y condiciones
+                            <input type="checkbox" name="registro" value="1">
+                        </label>
+                    </article>
+                    <div> 
+                        <input class=boton2 type="submit" value="Enviar">
+                        <input class=boton2 type="reset" value="Cancelar">
+                    </div>
+            </form>
+        </article>
+        <article class=mapa>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.7716138768483!2d-58.28405018476755!3d-34.71093998043182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32dfe3222ca77%3A0x6f07c9bc61258217!2s9%20de%20Julio%2079%2C%20Bernal%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1625531732045!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </article>
     </section>
 
-    <hr>
-
-    <section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.7716138768483!2d-58.28405018476755!3d-34.71093998043182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32dfe3222ca77%3A0x6f07c9bc61258217!2s9%20de%20Julio%2079%2C%20Bernal%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1625531732045!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-
-    <hr>
-
-    <footer class="backBlack">
-        <ul class="displayFlex justifyBet">
-            <li>Seguinos en:
-                <ul class="displayFlex">
+    <footer class="bg-dark footer">
+        <ul class=ulTop>
+            <li>Copyright © 2021 lenceriamariamaria - Todos los derechos reservados.</li>
+            <li class="ulTop__formato ulTop__formato--padding">
+                <ul class=redes>
                     <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/face-48.png" alt="facebook"></a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/insta-48.png" alt="instagram"></a></li>
                     <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/youtu-48.png" alt="youtube"></a></li>
                 </ul>
             </li>
-            <li>Copyright © 2021 lenceriamariamaria - Todos los derechos reservados.</li>
             <li>9 de Julio 79, Bernal, Buenos Aires</li>
         </ul>
-        <ul class="displayFlex justifyCenter">
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Tienda Online</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Preguntas Frecuentes</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Contacto</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Boton de Arrepentimiento</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Politica de cambio</a></li>
-            <li class=distanciaFooter><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Terminos y condiciones</a></li>
+        <ul class=footerNav>
+            <li class="footerNav__formato footerNav__formato--font"><a href="../index.html">Inicio</a></li>
+            <li class="footerNav__formato footerNav__formato--font"><a href="tienda_online.html ">Tienda Online</a></li>
+            <li class="footerNav__formato footerNav__formato--font"><a href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+            <li class="footerNav__formato footerNav__formato--font noRightBorder"><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <ul class=footerNav>
+            <li class="footerNav__formato footerNav__formato--font"><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Boton de Arrepentimiento</a></li>
+            <li class="footerNav__formato footerNav__formato--font"><a href="politicas_de_privacidad.html" target="_blank">Politicas de Privacidad</a></li>
+            <li class="footerNav__formato footerNav__formato--font noRightBorder"><a href="terminos_y_condiciones.html" target="_blank">Terminos y condiciones</a></li>
         </ul>
     </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

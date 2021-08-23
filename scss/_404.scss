@@ -1,0 +1,75 @@
+.space {
+  background-image: url(../media/starry-night-sky.jpg);
+}
+
+.error404 {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-areas: "e404 e404 e404 " "ovni ovni astro" ". btn404 .";
+    grid-template-columns: 35% 20% 35%;
+  }
+}
+
+#404 {
+  grid-area: e404;
+  display: flex;
+  justify-content: center;
+}
+
+#ovni {
+  grid-area: ovni;
+  height: 68vh;
+}
+
+#astro {
+  grid-area: astro;
+  margin-top: 8rem;
+}
+
+#btn404 {
+  grid-area: btn404;
+  display: flex;
+  justify-content: center;
+}
+
+.text404 {
+  width: 100vw;
+  font-family: $fontRara;
+  font-size: 2em;
+  color: red;
+  padding-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    font-size: 3.5em;
+  }
+}
+
+.nave {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.astronauta {
+  height: 30vh;
+  width: 100%;
+}
+
+.form__btn2 {
+  background-color: rgba(180, 9, 9, 1);
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 12rem;
+  text-transform: uppercase;
+  border-radius: 4rem;
+  color: white;
+  &:hover {
+    background-color: rgb(224, 98, 8);
+  }
+}
