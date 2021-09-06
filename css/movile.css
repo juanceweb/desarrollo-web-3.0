@@ -543,7 +543,7 @@ footer {
 .accordion__h3 {
   text-align: center;
   font-size: 1.8rem;
-  margin: 2rem;
+  margin: 1rem;
   font-family: "Otomanopee One", sans-serif; }
   @media screen and (min-width: 1200px) {
     .accordion__h3 {
