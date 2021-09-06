@@ -44,11 +44,14 @@
 
 .accordion__h3 {
   text-align: center;
-  font-size: 1.8rem;
-  margin: 1rem;
+  font-size: 1.2rem;
+  margin: 2rem;
   font-family: $fontRara;
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
   @media screen and (min-width: 1200px) {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 
