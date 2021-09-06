@@ -45,7 +45,11 @@
 }
 
 .contacto__formulario--bg {
-  background-image: url(../media/sativa.png);
+  background-image: url(../media/background_contacto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 #select {
@@ -66,7 +70,11 @@
   align-items: center;
   align-content: center;
   padding: 0.5rem;
-  background: rgb(80, 80, 80);
+  background: linear-gradient(
+    0deg,
+    rgba(153, 51, 51, 0.6),
+    rgba(129, 7, 7, 0.4)
+  );
 }
 
 .mapa {
@@ -80,5 +88,9 @@
 .boton2 {
   @extend .form__btn;
   @extend .form__btn--color;
-  background-color: rgb(80, 80, 80);
+  background: linear-gradient(
+    0deg,
+    rgba(153, 51, 51, 0.6),
+    rgba(129, 7, 7, 0.4)
+  );
 }

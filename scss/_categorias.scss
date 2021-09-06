@@ -7,9 +7,13 @@
   text-transform: uppercase;
   font-family: $fontRara;
   text-align: center;
-  font-size: 2.5rem;
-  padding-top: 1rem;
+  font-size: 3rem;
+  padding-top: 4rem;
+  -webkit-text-stroke: 2px black;
   color: red;
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+  }
 }
 
 .categorias {
@@ -69,4 +73,27 @@
     height: 30vh;
     font-size: 1.5rem;
   }
+}
+
+.card {
+  h5 {
+    color: red;
+    -webkit-text-stroke: 2px black;
+    font: $fontRara;
+    font-size: 3rem;
+    font-weight: bold;
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.card__text--position {
+  position: absolute;
+  top: 32%;
+  width: 100%;
+  text-align: center;
 }

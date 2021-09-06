@@ -1,26 +1,48 @@
 .sectionPreguntas {
   padding: 0 15% 0 15%;
   background-image: url(../media/spring.png);
+  @media screen and (min-width: 1200px) {
+    padding: 0 20% 0 20%;
+  }
   article h4 {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0.5rem;
-    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.8rem;
+    }
   }
   article p {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0.5rem;
-    padding-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.3rem;
+    }
   }
-  @media screen and (min-width: 1200px) {
-    padding: 0 25% 0 25%;
-    font-size: 1.3rem;
+  article ol {
+    padding: 0.5rem;
+    padding-left: 2.5rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.3rem;
+    }
+  }
+  article ul {
+    padding: 0.5rem;
+    padding-left: 2.5rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.3rem;
+    }
   }
 }
 
-.sectionPreguntas__h3 {
+.accordion-bg {
+  background-image: url(../media/spring.png);
+}
+
+.accordion__h3 {
   text-align: center;
   font-size: 1.8rem;
   margin: 2rem;
@@ -30,6 +52,6 @@
   }
 }
 
-.sectionPreguntas__h3--color {
+.accordion__h3--color {
   color: red;
 }

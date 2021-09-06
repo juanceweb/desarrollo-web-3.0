@@ -40,7 +40,7 @@
             <div class="carousel-item active">
                 <img src="./media/inicial_inicial.jpg" class="d-block w-100" alt="imageninicial">
                 <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
-                    <h1>Bienvenidos a Maria Maria</h1>
+                    <h1 class=opacityh1>Bienvenidos a Maria Maria</h1>
                 </div>
             </div>
             <div class="carousel-item">
@@ -61,7 +61,7 @@
     </div>
 
     <section class="form bgGradient">
-        <form action="envio.php" method="post">
+        <form action="" method="post">
             <label>
                 <h3>sumate a nuestra comunidad</h3>
                 <p>Con tu registro accedes a descuentos y futuras promociones!</p>
@@ -72,12 +72,40 @@
     </section>
 
     <section class="sectionCategorias">
-            <h2 class=SectionCategorias__h2>categorias</h2>
-            <div class=categorias>
-                <input class="categorias__secciones categorias__secciones--bgProd" type="button" value="productos">
-                <input class="categorias__secciones categorias__secciones--bgLenc" type="button" value="lenceria">
-                <input class="categorias__secciones categorias__secciones--bgBata" type="button" value="batas">
+        <h2 class=SectionCategorias__h2>categorias</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 m-5">
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="./media/categorias_camiseta.jpg" class="card-img-top" alt="camisetas categoria">
+                    <h5 class="card__text--position">Camisetas</h5>
+                    <div class="card-body text-center">
+                        <a class="btn btn-danger btn-lg" href="/pages/tienda_online.html">Ver Mas</a>
+                    </div>
+                </div>
             </div>
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="./media/categorias_corpiños.jpg" class="card-img-top" alt="categorias corpiño">
+                    <h5 class="card__text--position">Lenceria</h5>
+                    <div class="card-body text-center">
+                        <a class="btn btn-danger btn-lg" href="/pages/tienda_online.html">Ver Mas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./media/categorias_batas.jpg" class="card-img-top" alt="categorias batas">
+                    <h5 class="card__text--position">Batas</h5>
+                    <div class="card-body text-center">
+                        <a class="btn btn-danger btn-lg" href="/pages/tienda_online.html">Ver Mas
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                            NEW!
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="bg-dark footer">

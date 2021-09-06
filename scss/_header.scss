@@ -8,6 +8,7 @@
   min-height: 50vh;
   align-items: center;
   margin: 0;
+  font-size: 4rem;
 }
 
 .bgHeroe__format--font {
@@ -16,6 +17,7 @@
 
 .bgHeroe__format--color {
   color: red;
+  -webkit-text-stroke: 2px black;
 }
 
 .bgHeroeTienda {

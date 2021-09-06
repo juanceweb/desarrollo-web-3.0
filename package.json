@@ -1,17 +1,26 @@
 {
-  "name": "sass",
+  "name": "proyecto_desarrollo_web",
   "version": "1.0.0",
   "description": "pagina de lenceria maria maria",
   "main": "index.js",
+  "dependencies": {
+    "nodemon": "^2.0.12",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss css/movile.css",
-    "watch-css": "nodemon -e scss -x \"npm     run build-css\""
+		"watch-css": "nodemon -e scss -x \"npm     run build-css\""
   },
-  "author": "juance",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanceweb/desarrolloweb-2.0.git"
+  },
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^6.0.1",
-    "nodemon": "^2.0.12"
-  }
+  "bugs": {
+    "url": "https://github.com/juanceweb/desarrolloweb-2.0/issues"
+  },
+  "homepage": "https://github.com/juanceweb/desarrolloweb-2.0#readme"
 }

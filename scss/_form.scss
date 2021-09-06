@@ -4,11 +4,19 @@
   align-items: center;
   text-align: center;
   line-height: 2rem;
-  padding: 2rem 0;
+  padding: 4rem 0;
   color: white;
   h3 {
     text-transform: uppercase;
     font-family: $fontRara;
+    -webkit-text-stroke: 2px black;
+    font-size: 1.8rem;
+    @media screen and (min-width: 768px) {
+      font-size: 2.2rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2.5rem;
+    }
   }
 }
 

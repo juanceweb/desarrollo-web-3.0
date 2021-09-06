@@ -4,3 +4,52 @@
   justify-content: center;
   height: 30vh;
 }
+
+@keyframes Aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.opacityh1 {
+  animation-name: Aparecer;
+  animation-duration: 3s;
+}
+
+@keyframes Left {
+  0% {
+    left: -200rem;
+    top: 0px;
+  }
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.moveLeft {
+  position: relative;
+  animation-name: Left;
+  animation-duration: 4s;
+}
+
+@keyframes Right {
+  0% {
+    right: -200rem;
+    top: 0px;
+  }
+  50% {
+    right: 0px;
+    top: 0px;
+  }
+}
+
+.moveRight {
+  position: relative;
+  animation-name: Right;
+  animation-duration: 4s;
+}

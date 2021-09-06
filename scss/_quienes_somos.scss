@@ -19,12 +19,20 @@
     color: red;
     font-family: $fontRara;
     padding: 1rem 0rem;
+    -webkit-text-stroke: 1px black;
   }
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 5rem 12rem;
     align-content: center;
+  }
+  p {
+    font-weight: bold;
+    font-size: 0.8rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -75,6 +83,7 @@
 
 .VisionMision__vision--color {
   color: rgba(200, 9, 9, 1);
+  -webkit-text-stroke: 1px black;
 }
 
 .VisionMision__mision {
@@ -99,6 +108,7 @@
 
 .VisionMision__mision--color {
   color: rgba(200, 9, 9, 1);
+  -webkit-text-stroke: 1px black;
 }
 
 @media screen and (min-width: 768px) {
