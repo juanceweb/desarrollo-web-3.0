@@ -2,14 +2,12 @@
   display: flex;
   background-image: url(../media/spring.png);
   justify-content: center;
-}
-
-.tablaTalles__tabla1 {
-  display: flex;
-  padding: 1rem;
-  margin: 2rem;
-}
-
-.tablaTalles__tabla1--bgcolor {
-  background: red;
+  .tablaTalles__tabla1 {
+    display: flex;
+    padding: 1rem;
+    margin: 2rem;
+  }
+  .tablaTalles__tabla1--bgcolor {
+    background: red;
+  }
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/movile.css">
+    <link rel="stylesheet" href="../css/lightbox.css">
     <title>Lenceria Maria Maria - Tienda Online</title>
     <meta name="description" content="Encontra todos nuestros productos en nuestra tienda onlina, o en el local ubicado en Bernal, sobre la calle 9 de Julio">
     <meta name="keywords" content="lenceria, indumentaria, ropa, mujer, corpiño, bombacha, bata, camisetas, pantuflas, maria maria, bernal, medias, monos, local, 9 de julio, comprar, ropa de casa, tienda online, inicio, categorias">
@@ -30,7 +31,7 @@
         </div>
     </nav>
 
-    <header class=bgHeroeTienda>
+    <header class="bgHeroe bgHeroeTienda">
         <h1 class="d-flex justify-content-center bgHeroe__format bgHeroe__format--font bgHeroe__format--color opacityh1">Tienda Online</h1>
     </header>
     
@@ -46,7 +47,7 @@
     </section>
 
     <section class=tiendaNav>
-        <nav class="navbar navbar-expand-xl navbar-dark bgGradientBlack d-flex flex-column tienda__aside--nav">
+        <nav class="navbar navbar-expand-xl navbar-dark bgSecondNav d-flex flex-column tienda__aside--nav">
             <div class="container-fluid justify-content-center">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -65,39 +66,94 @@
                 </div>
             </div>
         </nav>
-        <div class="sectionArt w-100">
-            <h2 class=SectionCategorias__h2 id=cat>todos los productos</h2>
-            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art1>
-                <img class=" border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Azul.jpeg" alt="bata azul" width="100%">
-                <h3>Bata Clasica Azul</h3>
-                <input class=boton type="submit" value="comprar">
-            </article>
-            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art2>
-                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Gris.jpeg" alt="bata gris" width="100%">
-                <h3>Bata Clasica Gris</h3>
-                <input class=boton type="submit" value="comprar">
-            </article>
-            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art3>
-                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Rojo.jpeg" alt="bata roja" width="100%">
-                <h3>Bata Clasica Roja</h3>
-                <input class=boton type="submit" value="comprar">
-            </article>
-            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art4>
-                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Rosa.jpeg" alt="bata rosa" width="100%">
-                <h3>Bata Clasica Rosa</h3>
-                <input class=boton type="submit" value="comprar">
-            </article>
-            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art5>
-                <img class=" border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/bata clasica - uva.jpg" alt="bata uva" width="100%">
-                <h3>Bata Clasica Uva</h3>
-                <input class=boton type="submit" value="comprar">
-            </article>
-            <article class="border border-3 border-dark rounded sectionArt__articulo sectionArt__articulo--bgcolor" id=art6>
-                <img class="border border-3 border-dark rounded sectionArt__articuloImg" src="../media/Bata Clasica/Bata Clasica - Magenta.jpeg" alt="bata magenta" width="100%">
-                <h3>Bata Clasica Magenta</h3>
-                <input class=boton type="submit" value="comprar">
-            </article>
-            <nav aria-label="Page navigation example" id=pag>
+        <div class="sectionArticulos tienda__aside--pro">
+            <div class=container>
+                <div class="row">
+                    <h2 class="col-12 sectionArticulos__h2--format">todos los productos</h2>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card m-5 bg-danger">
+                            <a href="../media/pijamas/Linea Emma/Linea Emma - Gris.jpeg" data-lightbox="linea emma">
+                                <img src="../media/pijamas/Linea Emma/Linea Emma - Gris.jpeg" class="card-img-top" alt="linea emma">
+                            </a>
+                            <h5 class="card__text--position">Linea Emma</h5>
+                            <div class="card-body text-center">
+                                <a class="btn btn-warning btn-lg text-white" href="/pages/tienda_online.html">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card m-5 bg-danger">
+                            <a href="../media/pijamas/Linea Dreams/Linea Dreams - Salmon.jpeg" data-lightbox="linea dreams">
+                                <a href="../media/pijamas/Linea Dreams/Linea Dreams - Gris.jpeg" data-lightbox="linea dreams">
+                                    <img src="../media/pijamas/Linea Dreams/Linea Dreams - Gris.jpeg" class="card-img-top" alt="linea dreams">
+                                </a>
+                            </a>
+                            <h5 class="card__text--position">Linea Dreams</h5>
+                            <div class="card-body text-center">
+                                <a class="btn btn-warning btn-lg text-white" href="/pages/tienda_online.html">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card m-5  bg-danger">
+                            <a href="../media/pijamas/Linea Minnie/Linea Minnie - Gris.jpeg" data-lightbox="linea minnie">
+                                <img src="../media/pijamas/Linea Minnie/Linea Minnie - Gris.jpeg" class="card-img-top" alt="linea minnie">
+                            </a>
+                            <h5 class="card__text--position">Linea Minnie</h5>
+                            <div class="card-body text-center">
+                                <a class="btn btn-warning btn-lg text-white" href="/pages/tienda_online.html">Comprar
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                                    NEW!
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card m-5  bg-danger">
+                            <a href="../media/pijamas/Linea Love/Linea Love - Azul.jpeg" data-lightbox="linea love">
+                                <img src="../media/pijamas/Linea Love/Linea Love - Azul.jpeg" class="card-img-top" alt="linea love">
+                            </a>
+                            <h5 class="card__text--position">Linea Love</h5>
+                            <div class="card-body text-center">
+                                <a class="btn btn-warning btn-lg text-white" href="/pages/tienda_online.html">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card m-5  bg-danger">
+                            <a href="../media/pijamas/Linea Shine/Linea Shine - Celeste.jpeg" data-lightbox="linea shine">
+                                <a href="../media/pijamas/Linea Shine/Linea Shine - Rosa.jpeg" data-lightbox="linea shine">
+                                    <img src="../media/pijamas/Linea Shine/Linea Shine - Rosa.jpeg" class="card-img-top" alt="linea shine">
+                                </a>
+                            </a>
+                            <h5 class="card__text--position">Linea Shine</h5>
+                            <div class="card-body text-center">
+                                <a class="btn btn-warning btn-lg text-white" href="/pages/tienda_online.html">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-6 col-xl-4">
+                        <div class="card m-5  bg-danger">
+                            <a href="../media/pijamas/Linea Weekend/Linea Weekend - Verde 2.jpeg" data-lightbox="linea weekend">
+                                <a href="../media/pijamas/Linea Weekend/Linea Weekend - Gris.jpeg" data-lightbox="linea weekend">
+                                    <img src="../media/pijamas/Linea Weekend/Linea Weekend - Gris.jpeg" class="card-img-top" alt="linea weekend">
+                                </a>
+                            </a>
+                            <h5 class="card__text--position">Linea Weekend</h5>
+                            <div class="card-body text-center">
+                                <a class="btn btn-warning btn-lg text-white" href="/pages/tienda_online.html">Comprar
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                                    NEW!
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- <nav aria-label="Page navigation example" id=pag>
                 <ul class="pagination paginationMia justify-content-center py-3">
                     <li class="page-item p-1 border border-2"><a class="page-link" href="#">Anterior</a></li>
                     <li class="page-item p-1 border border-2"><a class="page-link" href="#">1</a></li>
@@ -105,8 +161,7 @@
                     <li class="page-item p-1 border border-2"><a class="page-link" href="#">3</a></li>
                     <li class="page-item p-1 border border-2"><a class="page-link" href="#">Siguiente</a></li>
                 </ul>
-            </nav>
-        </div>
+            </nav> -->
     </section>
 
     <footer class="bg-dark footer">
@@ -114,9 +169,9 @@
             <li>Copyright © 2021 lenceriamariamaria - Todos los derechos reservados.</li>
             <li class="ulTop__formato ulTop__formato--padding">
                 <ul class=redes>
-                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/face-48.png" alt="facebook"></a></li>
-                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/insta-48.png" alt="instagram"></a></li>
-                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank"><img src="../media/youtu-48.png" alt="youtube"></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="../media/face-48.png" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="../media/insta-48.png" alt="instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="../media/youtu-48.png" alt="youtube"></a></li>
                 </ul>
             </li>
             <li>9 de Julio 79, Bernal, Buenos Aires</li>
@@ -128,13 +183,13 @@
             <li class="footerNav__formato footerNav__formato--font noRightBorder"><a href="contacto.html">Contacto</a></li>
         </ul>
         <ul class=footerNav>
-            <li class="footerNav__formato footerNav__formato--font"><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Boton de Arrepentimiento</a></li>
             <li class="footerNav__formato footerNav__formato--font"><a href="politicas_de_privacidad.html" target="_blank">Politicas de Privacidad</a></li>
             <li class="footerNav__formato footerNav__formato--font noRightBorder"><a href="terminos_y_condiciones.html" target="_blank">Terminos y condiciones</a></li>
         </ul>
     </footer>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
-    
+    <script src="../js/lightbox-plus-jquery.js"></script>
+
 </body>
 </html>

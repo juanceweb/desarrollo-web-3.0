@@ -1,15 +1,29 @@
-.carousel-item {
-  height: 650px;
-}
-.carousel-item img {
-  height: 650px;
-  object-fit: cover;
-}
-
-.carousel-inner h1 {
-  color: red;
-  font-family: $fontRara;
-  font-weight: bold;
-  font-size: 4rem;
-  -webkit-text-stroke: 2px black;
+.carousel-inner {
+  .carousel-item {
+    height: 650px;
+    img {
+      height: 650px;
+      object-fit: cover;
+    }
+  }
+  h1 {
+    color: red;
+    font-family: $fontRara;
+    font-weight: bold;
+    font-size: 3rem;
+    -webkit-text-stroke: 2px black;
+    @media screen and (min-width: 768px) {
+      font-size: 4rem;
+    }
+  }
+  h3 {
+    color: red;
+    font-family: $fontRara;
+    font-weight: bold;
+    font-size: 3rem;
+    -webkit-text-stroke: 2px black;
+    @media screen and (min-width: 768px) {
+      font-size: 4rem;
+    }
+  }
 }

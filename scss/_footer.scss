@@ -17,65 +17,58 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
-}
-
-.ulTop {
-  @media screen and (min-width: 1200px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1;
-    justify-content: space-between;
-    padding: 0 2rem 0rem 2rem;
+  .ulTop {
+    @media screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1;
+      justify-content: space-between;
+      padding: 0 2rem 0rem 2rem;
+    }
+    .ulTop__formato {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin-right: 2rem;
+      .redes {
+        display: flex;
+      }
+    }
+    .ulTop__formato--padding {
+      padding-top: 0.5rem;
+    }
   }
-}
-
-.ulTop__formato {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin-right: 2rem;
-}
-
-.ulTop__formato--padding {
-  padding-top: 0.5rem;
-}
-
-.redes {
-  display: flex;
-}
-
-.footerNav {
-  margin-right: 2rem;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    margin: 0.2rem;
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    justify-content: center;
-  }
-}
-.footerNav__formato {
-  border: groove;
-  border-width: 2px;
-  border-color: rgb(150, 9, 9);
-  @media screen and (min-width: 768px) {
-    padding: 0px 0.5rem;
-    background-color: $bg-dark;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-  }
-}
-
-.footerNav__formato--font {
-  font-weight: bold;
-  font: $fontMain;
-}
-
-@media screen and (min-width: 768px) {
-  .noRightBorder {
-    border-right: none;
+  .footerNav {
+    margin-right: 2rem;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      margin: 0.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
+    .footerNav__formato {
+      border: groove;
+      border-width: 2px;
+      border-color: rgb(150, 9, 9);
+      @media screen and (min-width: 768px) {
+        padding: 0px 0.5rem;
+        background-color: $bg-dark;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+      }
+    }
+    .footerNav__formato--font {
+      font-weight: bold;
+      font: $fontMain;
+    }
+    @media screen and (min-width: 768px) {
+      .noRightBorder {
+        border-right: none;
+      }
+    }
   }
 }

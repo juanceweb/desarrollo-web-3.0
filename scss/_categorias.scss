@@ -1,99 +1,37 @@
 .sectionCategorias {
   background-image: url(../media/spring.png);
   border-bottom: groove black 1px;
-}
-
-.SectionCategorias__h2 {
-  text-transform: uppercase;
-  font-family: $fontRara;
-  text-align: center;
-  font-size: 3rem;
-  padding-top: 4rem;
-  -webkit-text-stroke: 2px black;
-  color: red;
-  @media screen and (min-width: 768px) {
-    font-size: 4rem;
-  }
-}
-
-.categorias {
-  display: grid;
-  grid-template-areas: ". productos . " " . lenceria ." ". batas .";
-  grid-template-columns: 15% auto 15%;
-  grid-template-rows: repeat(3, auto);
-  grid-row-gap: 1.5rem;
-  padding: 1rem 0rem;
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 5% 23.5% 19.5% 4% 19.5% 23.5% 5%;
-    grid-template-areas: ". productos productos . lenceria lenceria ." ". . batas batas batas . . ";
-    grid-template-rows: 1fr 1fr;
-  }
-  @media screen and (min-width: 1200px) {
-    grid-template-columns: 5% auto 2% auto 2% auto 5%;
-    grid-template-areas: ". productos . lenceria . batas . ";
-    grid-template-rows: 1fr;
-    margin-bottom: 2rem;
-    height: 40vh;
-    align-items: center;
-  }
-}
-
-.categorias__secciones {
-  background-size: cover;
-  height: 20vh;
-  text-transform: uppercase;
-  font-family: $fontRara;
-  font-weight: bold;
-  font-size: 1rem;
-  color: red;
-}
-
-.categorias__secciones--bgProd {
-  grid-area: productos;
-  background-image: url(../media/camisetas_cat.jpg);
-  @media screen and (min-width: 1200px) {
-    height: 30vh;
-    font-size: 1.5rem;
-  }
-}
-
-.categorias__secciones--bgLenc {
-  grid-area: lenceria;
-  background-image: url(../media/corpiños_cat.jpg);
-  @media screen and (min-width: 1200px) {
-    height: 30vh;
-    font-size: 1.5rem;
-  }
-}
-
-.categorias__secciones--bgBata {
-  grid-area: batas;
-  background-image: url(../media/batas_cat.jpg);
-  @media screen and (min-width: 1200px) {
-    height: 30vh;
-    font-size: 1.5rem;
-  }
-}
-
-.card {
-  h5 {
-    color: red;
-    -webkit-text-stroke: 2px black;
-    font: $fontRara;
+  .SectionCategorias__h2 {
+    text-transform: uppercase;
+    font-family: $fontRara;
+    text-align: center;
     font-size: 3rem;
-    font-weight: bold;
+    padding-top: 4rem;
+    -webkit-text-stroke: 2px black;
+    color: red;
     @media screen and (min-width: 768px) {
-      font-size: 2rem;
-    }
-    @media screen and (min-width: 1200px) {
-      font-size: 3rem;
+      font-size: 4rem;
     }
   }
-}
-
-.card__text--position {
-  position: absolute;
-  top: 32%;
-  width: 100%;
-  text-align: center;
+  .card {
+    h5 {
+      color: red;
+      -webkit-text-stroke: 2px black;
+      font: $fontRara;
+      font-size: 3rem;
+      font-weight: bold;
+      @media screen and (min-width: 768px) {
+        font-size: 2rem;
+      }
+      @media screen and (min-width: 1200px) {
+        font-size: 3rem;
+      }
+    }
+    .card__text--position {
+      position: absolute;
+      top: 32%;
+      width: 100%;
+      text-align: center;
+    }
+  }
 }

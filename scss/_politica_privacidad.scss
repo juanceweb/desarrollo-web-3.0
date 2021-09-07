@@ -24,19 +24,17 @@
       font-size: 1rem;
     }
   }
-}
-
-.politica__h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin: 2rem;
-  font-family: $fontRara;
-  @media screen and (min-width: 1200px) {
-    font-size: 2.5rem;
+  .politica__h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 2rem;
+    font-family: $fontRara;
+    @media screen and (min-width: 1200px) {
+      font-size: 2.5rem;
+    }
   }
-}
-
-.politica__h3--color {
-  color: red;
-  -webkit-text-stroke: 2px black;
+  .politica__h3--color {
+    color: red;
+    -webkit-text-stroke: 2px black;
+  }
 }

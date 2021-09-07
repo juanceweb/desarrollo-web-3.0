@@ -1,33 +1,44 @@
 .bgHeroe {
-  background-image: url(../media/inicial_preguntas.jpg);
   background-size: cover;
-}
-
-.bgHeroe__format {
-  text-transform: uppercase;
-  min-height: 50vh;
-  align-items: center;
-  margin: 0;
-}
-
-.bgHeroe__format--font {
-  font-family: $fontRara;
-  font-size: 3rem;
-  text-align: center;
-  @media screen and (min-width: 768px) {
-    font-size: 3.5rem;
+  .bgHeroe__format {
+    text-transform: uppercase;
+    min-height: 50vh;
+    align-items: center;
+    margin: 0;
   }
-  @media screen and (min-width: 1200px) {
-    font-size: 4rem;
+  .bgHeroe__format--font {
+    font-family: $fontRara;
+    font-size: 3rem;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 4rem;
+    }
+  }
+  .bgHeroe__format--color {
+    color: red;
+    -webkit-text-stroke: 2px black;
   }
 }
 
-.bgHeroe__format--color {
-  color: red;
-  -webkit-text-stroke: 2px black;
+.bgHeroeQuienesSomos {
+  background-image: url(../media/inicial_preguntas.jpg);
 }
 
 .bgHeroeTienda {
-  background-image: url(../media/todos_cat.jpg);
-  background-size: cover;
+  background-image: url(../media/tienda_online.png);
+}
+
+.bgHeroePreguntas {
+  background-image: url(../media/preguntas_frencuentes.jpeg);
+}
+
+.bgHeroeTablas {
+  background-image: url(../media/tabla_talles.png);
+}
+
+.bgHeroeContacto {
+  background-image: url(../media/contacto.jpg);
 }
