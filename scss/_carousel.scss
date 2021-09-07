@@ -11,6 +11,7 @@
     font-family: $fontRara;
     font-weight: bold;
     font-size: 3rem;
+    text-transform: uppercase;
     -webkit-text-stroke: 2px black;
     @media screen and (min-width: 768px) {
       font-size: 4rem;
@@ -20,7 +21,8 @@
     color: red;
     font-family: $fontRara;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3em;
+    text-transform: uppercase;
     -webkit-text-stroke: 2px black;
     @media screen and (min-width: 768px) {
       font-size: 4rem;
