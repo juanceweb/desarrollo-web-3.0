@@ -15,9 +15,9 @@
 /* ------- CAROUSEL------------*/
 /* ----------------------------*/
 .carousel-inner .carousel-item {
-  height: 650px; }
+  height: 70vh; }
   .carousel-inner .carousel-item img {
-    height: 650px;
+    height: 70vh;
     object-fit: cover; }
 
 .carousel-inner h1 {
@@ -156,7 +156,8 @@
 /* -------- HEADER ------------*/
 /* ----------------------------*/
 .bgHeroe {
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .bgHeroe .bgHeroe__format {
     text-transform: uppercase;
     min-height: 50vh;
