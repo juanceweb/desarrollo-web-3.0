@@ -19,7 +19,7 @@
     }
   }
   .form__btn {
-    background: linear-gradient(to top, rgb(107, 16, 16), rgb(173, 57, 115));
+    background: rgb(173, 57, 115);
     font-weight: bold;
     padding: 0.3rem 1rem;
     margin: 0.5rem 0.5rem;
@@ -27,9 +27,9 @@
     width: 10rem;
     text-transform: uppercase;
     border-radius: 4rem;
-    &:hover {
-      background-color: rgb(224, 98, 8);
-    }
+  }
+  .form__btn:hover {
+    background-color: rgb(107, 16, 16);
   }
   .form__btn--color {
     color: white;

@@ -10,8 +10,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/main.scss css/movile.css",
-		"watch-css": "nodemon -e scss -x \"npm     run build-css\""
+    "build-css": "node-sass --include-path scss scss/main.scss css/style.css",
+		"watch-css": "nodemon -e scss -x \"npm     run build-css\"",
+    "build-bt": "node-sass --include-path scss bootstrap/bootstrap.scss css/bootstrap.css",
+    "watch-bt": "nodemon -e scss -x \"npm      run build-bt\""
   },
   "repository": {
     "type": "git",
