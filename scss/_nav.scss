@@ -1,5 +1,11 @@
 .navbar-nav li {
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 0 1rem;
+  @media screen and (min-width: 990px) {
+    font-size: 0.8rem;
+    padding: 0 0.9rem;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 1.2rem;
+  }
 }
