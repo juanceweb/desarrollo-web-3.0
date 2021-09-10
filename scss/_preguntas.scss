@@ -7,9 +7,13 @@
   article h4 {
     display: grid;
     grid-template-columns: 1fr;
+    text-align: center;
     padding: 0.5rem 1rem;
     font-size: 1.3rem;
     font-weight: bold;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
     @media screen and (min-width: 1200px) {
       font-size: 1.8rem;
     }
@@ -17,7 +21,11 @@
   article p {
     display: grid;
     grid-template-columns: 1fr;
+    text-align: center;
     padding: 0.5rem 1rem;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
     @media screen and (min-width: 1200px) {
       font-size: 1.3rem;
     }
