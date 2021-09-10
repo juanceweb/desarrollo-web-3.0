@@ -421,9 +421,11 @@ footer {
   align-items: center;
   text-align: center; }
   .VisionMision h4 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #070311; }
   .VisionMision p {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #070311; }
   @media screen and (min-width: 768px) {
     .VisionMision {
       display: grid;
