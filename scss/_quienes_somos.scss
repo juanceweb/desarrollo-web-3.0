@@ -90,6 +90,9 @@
   h4 {
     text-transform: uppercase;
   }
+  p {
+    text-transform: uppercase;
+  }
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -119,7 +122,6 @@
   }
   .VisionMision__vision--color {
     color: rgba(200, 9, 9, 1);
-    -webkit-text-stroke: 1px black;
   }
   .VisionMision__mision {
     background-image: url(../media/vision.jpg);
@@ -142,6 +144,5 @@
   }
   .VisionMision__mision--color {
     color: rgba(200, 9, 9, 1);
-    -webkit-text-stroke: 1px black;
   }
 }
