@@ -261,8 +261,11 @@
     color: red;
     -webkit-text-stroke: 2px black;
     font: "Dancing Script", cursive;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold; }
+    @media screen and (min-width: 492px) {
+      .sectionCategorias .card h5 {
+        font-size: 3rem; } }
     @media screen and (min-width: 768px) {
       .sectionCategorias .card h5 {
         font-size: 2rem; } }
