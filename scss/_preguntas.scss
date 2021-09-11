@@ -46,20 +46,16 @@
   }
   .accordion-bg {
     background-image: url(../media/spring.png);
-    .accordion__h3 {
-      text-align: center;
-      font-size: 2rem;
-      margin: 2rem;
-      font-family: $fontRara;
-      @media screen and (min-width: 768px) {
-        font-size: 2.5rem;
-      }
-      @media screen and (min-width: 1200px) {
-        font-size: 3rem;
-      }
+    color: red;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem;
+    font-family: $fontRara;
+    @media screen and (min-width: 768px) {
+      font-size: 2.5rem;
     }
-    .accordion__h3--color {
-      color: red;
+    @media screen and (min-width: 1200px) {
+      font-size: 3rem;
     }
   }
 }

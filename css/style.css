@@ -523,20 +523,18 @@ footer {
       .sectionPreguntas article ul {
         font-size: 1.3rem; } }
   .sectionPreguntas .accordion-bg {
-    background-image: url(../media/spring.png); }
-    .sectionPreguntas .accordion-bg .accordion__h3 {
-      text-align: center;
-      font-size: 2rem;
-      margin: 2rem;
-      font-family: "Dancing Script", cursive; }
-      @media screen and (min-width: 768px) {
-        .sectionPreguntas .accordion-bg .accordion__h3 {
-          font-size: 2.5rem; } }
-      @media screen and (min-width: 1200px) {
-        .sectionPreguntas .accordion-bg .accordion__h3 {
-          font-size: 3rem; } }
-    .sectionPreguntas .accordion-bg .accordion__h3--color {
-      color: red; }
+    background-image: url(../media/spring.png);
+    color: red;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem;
+    font-family: "Dancing Script", cursive; }
+    @media screen and (min-width: 768px) {
+      .sectionPreguntas .accordion-bg {
+        font-size: 2.5rem; } }
+    @media screen and (min-width: 1200px) {
+      .sectionPreguntas .accordion-bg {
+        font-size: 3rem; } }
 
 /* ----------------------------*/
 /* --------- TABLA ------------*/
