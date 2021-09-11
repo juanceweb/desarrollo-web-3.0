@@ -62,6 +62,9 @@
         font-size: 4rem;
       }
     }
+    .card:hover {
+      transform: scale(1.05);
+    }
     .card-img-top {
       max-width: 100%;
       max-height: 25rem;
