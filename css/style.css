@@ -636,6 +636,9 @@ footer {
     @media screen and (min-width: 1200px) {
       .sectionContacto .mapa {
         height: auto; } }
+    .sectionContacto .mapa .mapa__format {
+      height: 100%;
+      width: 100%; }
 
 #select {
   display: flex;
