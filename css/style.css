@@ -710,12 +710,13 @@ footer {
     @media screen and (min-width: 1200px) {
       .terminos article h4 {
         padding: 0.5rem 0; } }
-  .terminos article p {
+  .terminos article div {
     display: grid;
+    padding-bottom: 1rem;
     grid-template-columns: 1fr;
     font-size: 0.8rem; }
     @media screen and (min-width: 1200px) {
-      .terminos article p {
+      .terminos article div {
         font-size: 1rem; } }
   .terminos .terminos__h3 {
     text-align: center;
