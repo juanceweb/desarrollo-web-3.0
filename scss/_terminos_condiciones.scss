@@ -25,7 +25,7 @@
   }
   article div {
     display: grid;
-    padding-bottom: 1rem;
+    padding: 0.5rem 0;
     grid-template-columns: 1fr;
     font-size: 0.8rem;
     @media screen and (min-width: 1200px) {
