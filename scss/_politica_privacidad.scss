@@ -10,16 +10,22 @@
     grid-template-columns: 1fr;
     text-transform: uppercase;
     padding: 0.5rem 0;
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     font-weight: bold;
+    @media screen and (min-width: 576px) {
+      font-size: 0.9rem;
+    }
     @media screen and (min-width: 1200px) {
-      padding: 0.5rem 0;
+      font-size: 1.1rem;
     }
   }
   article p {
     display: grid;
     grid-template-columns: 1fr;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    @media screen and (min-width: 576px) {
+      font-size: 0.8rem;
+    }
     @media screen and (min-width: 1200px) {
       font-size: 1rem;
     }
