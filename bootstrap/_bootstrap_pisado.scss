@@ -1,4 +1,5 @@
 $bg-dark: rgb(48, 48, 48);
+$bg-info: pink;
 
 //------------------------------------------------------------------------------------------------------
 //---------------------------------------------MAP PISADO-----------------------------------------------
@@ -7,7 +8,7 @@ $theme-colors: (
   "primary": blue,
   "secondary": grey,
   "success": green,
-  "info": orange,
+  "info": pink,
   "warning": violet,
   "danger": rgb(200, 3, 3),
   "light": white,
@@ -26,7 +27,7 @@ $theme-colors: (
         @for $i from 1 through $columns {
           .g-col#{$infix}-#{$i} {
             grid-column: auto / span $i;
-            grid-column-gap: 5rem; 
+            grid-column-gap: 5rem;
           }
         }
 

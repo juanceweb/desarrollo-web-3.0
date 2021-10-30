@@ -1,0 +1,56 @@
+[
+  {
+    "producto": "linea emma",
+    "categoria": "pijamas",
+    "precio": 1500,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa"
+  },
+  {
+    "producto": "linea blue",
+    "categoria": "batas_monos",
+    "precio": 5000,
+    "stock": 8
+  },
+  {
+    "producto": "linea sky",
+    "categoria": "pijamas",
+    "precio": 2000,
+    "stock": 2
+  },
+  {
+    "producto": "linea retro",
+    "categoria": "camisetas",
+    "precio": 1800,
+    "stock": 6
+  },
+  {
+    "producto": "linea dark",
+    "categoria": "batas_monos",
+    "precio": 4500,
+    "stock": 5
+  },
+  {
+    "producto": "linea stone",
+    "categoria": "pantuflas",
+    "precio": 2500,
+    "stock": 2
+  },
+  {
+    "producto": "linea bianca",
+    "categoria": "medias",
+    "precio": 800,
+    "stock": 10
+  },
+  {
+    "producto": "linea black",
+    "categoria": "ropa_interior",
+    "precio": 1500,
+    "stock": 8
+  },
+  {
+    "producto": "linea torres",
+    "categoria": "camisones",
+    "precio": 2800,
+    "stock": 15
+  }
+]

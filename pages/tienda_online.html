@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../media/logo_sinfondo.png" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/lightbox.css">
     <title>Lenceria Maria Maria - Tienda Online</title>
     <meta name="description" content="Encontra todos nuestros productos en nuestra tienda onlina, o en el local ubicado en Bernal, sobre la calle 9 de Julio">
     <meta name="keywords" content="lenceria, indumentaria, ropa, mujer, corpiño, bombacha, bata, camisetas, pantuflas, maria maria, bernal, medias, monos, local, 9 de julio, comprar, ropa de casa, tienda online, inicio, categorias">
@@ -28,13 +26,18 @@
                     <li class="nav-item"><a class="nav-link" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
                     <li class="nav-item"><a class="nav-link" href="tabla_de_talles.html">Tabla de Talles</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li>
+                        <button id="ver_carrito" class="btn border border-2 rounded-circle" type="button" data-bs-toggle="modal" data-bs-target="#modal2">
+                            <img src="../media/carrito-de-compras.png" alt="" height="30px">
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <header class="bgHeroe bgHeroeTienda">
-        <h1 class="d-flex justify-content-center bgHeroe__format bgHeroe__format--font bgHeroe__format--color opacityh1 px-1">Tienda Online</h1>
+        <h1 id="titulo_principal" class="d-flex justify-content-center bgHeroe__format bgHeroe__format--font bgHeroe__format--color opacityh1 px-1">Tienda Online</h1>
     </header>
     
     <section class="form bgGradient">
@@ -58,113 +61,22 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent2">
                     <ul class="nav secondNav">
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Todos los Productos</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Camisones</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Pijamas</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Batas/Mono</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Camisetas</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Ropa Interior</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Medias</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Pantuflas</a></li>
+                        <li class="nav-item"><a id="todos_productos" class="busqueda nav-link text-white" href="#">Todos los Productos</a></li>
+                        <li class="nav-item"><a id="camisones" class="busqueda nav-link text-white" href="#">Camisones</a></li>
+                        <li class="nav-item"><a id="pijamas" class="busqueda nav-link text-white" href="#">Pijamas</a></li>
+                        <li class="nav-item"><a id="batas_monos" class="busqueda nav-link text-white" href="#">Batas/Mono</a></li>
+                        <li class="nav-item"><a id="camisetas" class="busqueda nav-link text-white" href="#">Camisetas</a></li>
+                        <li class="nav-item"><a id="ropa_interior" class="busqueda nav-link text-white" href="#">Ropa Interior</a></li>
+                        <li class="nav-item"><a id="medias" class="busqueda nav-link text-white" href="#">Medias</a></li>
+                        <li class="nav-item"><a id="pantuflas" class="busqueda nav-link text-white" href="#">Pantuflas</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="sectionArticulos tienda__aside--pro">
             <div class=container>
-                <div class="row">
-                    <h2 class="col-12 sectionArticulos__h2--format">todos los productos</h2>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card m-5 bg-danger shadow-lg border border-3 border-danger">
-                            <a href="../media/pijamas/Linea_Emma/Linea_Emma_Gris.jpeg" data-lightbox="linea emma">
-                                <img src="../media/pijamas/Linea_Emma/Linea_Emma_Gris.jpeg" class="card-img-top" alt="linea emma">
-                            </a>
-                            <h5 class="card__text--position">Linea Emma</h5>
-                            <div class="card-body text-center">
-                                <a class="btn btn-danger btn-outline-dark btn-lg text-white border-2" href="/pages/tienda_online.html">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card m-5 bg-danger shadow-lg border border-3 border-danger">
-                            <a href="../media/pijamas/Linea_Dreams/Linea_Dreams_Gris.jpeg" data-lightbox="linea dreams">
-                                <img src="../media/pijamas/Linea_Dreams/Linea_Dreams_Gris.jpeg" class="card-img-top" alt="linea dreams">                       
-                            </a>
-                            <a href="../media/pijamas/Linea_Dreams/Linea_Dreams_Salmon.jpeg" data-lightbox="linea dreams">
-                            </a>
-
-                            <h5 class="card__text--position">Linea Dreams</h5>
-                            <div class="card-body text-center">
-                                <a class="btn btn-danger btn-outline-dark btn-lg text-white border-2" href="/pages/tienda_online.html">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card m-5  bg-danger shadow-lg border border-3 border-danger">
-                            <a href="../media/pijamas/Linea_Minnie/Linea_Minnie_Gris.jpeg" data-lightbox="linea minnie">
-                                <img src="../media/pijamas/Linea_Minnie/Linea_Minnie_Gris.jpeg" class="card-img-top" alt="linea minnie">
-                            </a>
-                            <h5 class="card__text--position">Linea Minnie</h5>
-                            <div class="card-body text-center">
-                                <a class="btn btn-danger btn-outline-dark btn-lg text-white border-2" href="/pages/tienda_online.html">Comprar
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                                    NEW!
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card m-5  bg-danger shadow-lg border border-3 border-danger">
-                            <a href="../media/pijamas/Linea_Love/Linea_Love_Azul.jpeg" data-lightbox="linea love">
-                                <img src="../media/pijamas/Linea_Love/Linea_Love_Azul.jpeg" class="card-img-top" alt="linea love">
-                            </a>
-                            <h5 class="card__text--position">Linea Love</h5>
-                            <div class="card-body text-center">
-                                <a class="btn btn-danger btn-outline-dark btn-lg text-white border-2" href="/pages/tienda_online.html">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card m-5  bg-danger shadow-lg border border-3 border-danger">
-                            <a href="../media/pijamas/Linea_Shine/Linea_Shine_Rosa.jpeg" data-lightbox="linea shine">
-                                <img src="../media/pijamas/Linea_Shine/Linea_Shine_Rosa.jpeg" class="card-img-top" alt="linea shine">
-                            </a>
-                            <a href="../media/pijamas/Linea_Shine/Linea_Shine_Celeste.jpeg" data-lightbox="linea shine">
-                            </a>
-                            <h5 class="card__text--position">Linea Shine</h5>
-                            <div class="card-body text-center">
-                                <a class="btn btn-danger btn-outline-dark btn-lg text-white border-2" href="/pages/tienda_online.html">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card m-5  bg-danger shadow-lg border border-3 border-danger">
-                            <a href="../media/pijamas/Linea_Weekend/Linea_Weekend_Gris.jpeg" data-lightbox="linea weekend">
-                                <img src="../media/pijamas/Linea_Weekend/Linea_Weekend_Gris.jpeg" class="card-img-top" alt="linea weekend">     
-                            </a>
-                            <a href="../media/pijamas/Linea_Weekend/Linea_Weekend_Verde_2.jpeg" data-lightbox="linea weekend">
-                            </a>
-                            <h5 class="card__text--position">Linea Weekend</h5>
-                            <div class="card-body text-center">
-                                <a class="btn btn-danger btn-outline-dark btn-lg text-white border-2" href="/pages/tienda_online.html">Comprar
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                                    NEW!
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div id="productos_mostrados" class="row">
                 </div>            
-                <nav aria-label="col-12 Page navigation example">
-                    <ul class="pagination paginationMia justify-content-center py-3">
-                        <li class="page-item p-1 border border-2"><a class="page-link" href="#">Anterior</a></li>
-                        <li class="page-item p-1 border border-2"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item p-1 border border-2"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item p-1 border border-2"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item p-1 border border-2"><a class="page-link" href="#">Siguiente</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
@@ -193,8 +105,27 @@
         </ul>
     </footer>
 
+    <div id="live_toast" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    </div>
+
+
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" id=modal_productos>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-2" aria-labelledby="modal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" id=modal_carrito>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/lightbox-plus-jquery.js"></script>
+    <script src="../js/variables.js"></script>
+    <script src="../js/clases.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/eventos.js"></script>
+    <script src="../js/main.js "></script>
 
 </body>
 </html>
