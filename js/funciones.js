@@ -218,9 +218,9 @@ function show_toast (cantidad) {
 
 function check_cantidad_toast (cantidad) {
     if (cantidad === 1) {
-        return `Agregaste ${cantidad} producto al Carrito!`
+        return `Agregaste ${cantidad} articulo de 1 producto al Carrito!`
     } else {
-        return `Agregaste ${cantidad} productos al Carrito!`
+        return `Agregaste ${cantidad} arituclos de 1 producto al Carrito!`
     }
 }
 
@@ -281,6 +281,13 @@ function crear_modal_carrito(carrito) {
             console.log("Hay producto en 0, no se puede confirmar la compra");
         } else {
             console.log("compra confirmada, gracias por elegirnos!");
+            for (const producto of carrito_compras) {
+                console.log("Cantidad seleccionada: " + producto.cantidad);
+                console.log("Stock: " + producto.stock);
+                producto.stock = producto.stock - producto.cantidad;
+                console.log("Nuevo Stock: " + producto.stock);
+                
+            }
         }
     })
 
@@ -332,10 +339,8 @@ function confirmar_cantidades () {
     }
     if (cerrar_compra >= 1) {
         $("#confirmar_carrito").attr("data-bs-dismiss","none")
-        console.log("el carrito dice none");
     } else {
         $("#confirmar_carrito").attr("data-bs-dismiss","modal")
-        console.log("el carrito dice sinene");
     }
 }
 

@@ -41,7 +41,6 @@ class Modelo {
     }
 
     aumentar_cantidad(cantidad) {
-        console.log("Stock:" + this.stock);
         if (cantidad === this.stock || this.stock === undefined) {
             return false
         } else {
@@ -50,7 +49,6 @@ class Modelo {
     }
 
     reducir_cantidad(cantidad) {
-        console.log("Stock:" + this.stock);
         if (cantidad === 0 || this.stock === undefined) {
             return false
         } else {
