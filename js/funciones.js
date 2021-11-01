@@ -90,7 +90,7 @@ function crear_modal_producto(producto) {
                                                     <div class="pt-4">
                                                         <button href="#" class="aumentar_cant btn btn-success py-1 m-2">+</button>
                                                         <label id="cantidad_${producto.id}" class="border bg-white px-2" size="1">${cantidad}</label>
-                                                        <button href="#" class="reducir_cant btn btn-danger py-1 m-2">-</button>
+                                                        <button type="button" class="reducir_cant btn btn-danger py-1 m-2" data-bs-toggle="popover" title="Popover title" data-bs-content="wololo">-</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -182,6 +182,7 @@ function aumentar(modelo, cantidad) {
         return cantidad
     } else {
         cantidad = cantidad
+
         return cantidad
     }
 }
@@ -229,6 +230,7 @@ function agregar_carrito(modelo, cantidad) {
     if (buscar_carrito == undefined) {
         modelo.cantidad = cantidad
         carrito_compras.push(modelo)
+        $("#span_carrito").html(carrito_compras.length)
     } else {
         modelo.cantidad = cantidad
     }
@@ -237,6 +239,7 @@ function agregar_carrito(modelo, cantidad) {
 
 function crear_modal_carrito(carrito) {
     let cuerpo_carrito = check_cantidad_carrito(carrito)
+    let cerrar_compra= 0
 
     $("#modal_carrito").empty()
     $("#modal_carrito").append(`<div class="modal-content modal__productos">
@@ -254,9 +257,32 @@ function crear_modal_carrito(carrito) {
                                         </div>    
                                     </div>
                                     <div class="modal-footer justify-content-center bg-dark">
-                                        <button class="btn btn-danger m-2 ">Confirmar Compra</button>
+                                        <button id="confirmar_carrito" class="btn btn-danger m-2" data-bs-dismiss="modal">Confirmar Compra</button>
                                     </div>
                                 </div>`)
+    confirmar_cantidades()
+
+
+    $("#confirmar_carrito").on ("click", (e) => {
+        e.preventDefault();
+        let confirmar= 0
+        if (carrito_compras.length === 0) {
+            confirmar +=1
+        } else {
+            for (const modelo of carrito_compras) {
+                if (modelo.cantidad == 0) {
+                    confirmar += 1
+                } else {
+                    // pass
+                }        
+            }
+        }
+        if (confirmar >= 1) {
+            console.log("Hay producto en 0, no se puede confirmar la compra");
+        } else {
+            console.log("compra confirmada, gracias por elegirnos!");
+        }
+    })
 
 
     for (const producto of carrito) {
@@ -280,10 +306,38 @@ function crear_modal_carrito(carrito) {
             let producto_encontrar = modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
             carrito_compras = carrito_compras.filter (modelo => modelo.modelo_id != producto_encontrar.modelo_id)
             crear_modal_carrito(carrito_compras)
+            $("#span_carrito").html(carrito_compras.length)
+        }) 
+        
+        $(`#${producto.modelo_id}`).bind('DOMSubtreeModified', () => {
+            cerrar_compra = 0
+            confirmar_cantidades()
         })
     }
 }
 
+
+function confirmar_cantidades () {
+    cerrar_compra = 0
+    if (carrito_compras.length === 0) {
+        cerrar_compra +=1
+    } else {
+        for (const modelo of carrito_compras) {
+            if (modelo.cantidad == 0) {
+                cerrar_compra += 1
+            } else {
+                // pass
+            }        
+        }
+    }
+    if (cerrar_compra >= 1) {
+        $("#confirmar_carrito").attr("data-bs-dismiss","none")
+        console.log("el carrito dice none");
+    } else {
+        $("#confirmar_carrito").attr("data-bs-dismiss","modal")
+        console.log("el carrito dice sinene");
+    }
+}
 
 function check_cantidad_carrito(carrito) {
     let items_carrito = ""
