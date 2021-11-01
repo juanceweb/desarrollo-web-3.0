@@ -31,9 +31,21 @@ function crear_modal_producto(producto) {
     let options_colores = `<option selected="selected" disabled>Seleccionar...</option>\n`
     let options_talles = `<option selected="selected" disabled>Seleccionar...</option>\n`
     producto.stock = undefined
+    let modelos_modal = modelos.filter (modelo => modelo.id == producto.id)
+    let talles_modal;
+    let modelo_final;
+    const colores = []
 
-    for (const color of producto.traer_colores()) {
-        options_colores += `<option value="${color}">${color}</option>\n`
+    for (const modelo of modelos_modal) {
+        if (colores.find (color => color == modelo.color)) {
+            //pass
+        } else {
+            colores.push(modelo.color)
+        }
+    }
+
+    for (const color of colores) {
+        options_colores += `<option class="text-uppercase" value="${color}">${color.toUpperCase()}</option>\n`
     }
 
     $("#modal_productos").empty()
@@ -94,9 +106,18 @@ function crear_modal_producto(producto) {
         options_talles = `<option selected="selected" disabled>Seleccionar...</option>\n`
         cantidad = 0
         color = e.target.value
-        for (const talle of producto.traer_talles(e.target.value)) {
-            options_talles += `<option value="${talle}">${talle}</option>\n`
+        const talles = []
+        modelo_final = undefined
+        talles_modal = modelos_modal.filter (modelo => modelo.color == color)
+
+        for (const modelo of talles_modal) {
+            talles.push(modelo.talle)
         }
+
+        for (const talle of talles) {
+            options_talles += `<option class="text-uppercase" value="${talle}">${talle.toUpperCase()}</option>\n`
+        }
+
         $(`#talles_${producto.id}`).empty()
         $(`#talles_${producto.id}`).append(options_talles)
         $(`#cantidad_${producto.id}`).html(`${cantidad}`)
@@ -107,59 +128,73 @@ function crear_modal_producto(producto) {
     $(`#talles_${producto.id}`).on("change", (e) => {
         cantidad = 0
         talle = e.target.value;
-        producto.traer_stock(color, talle)
+        modelo_final = undefined
+        modelo_final = talles_modal.find(producto => producto.talle == talle)
         $(`#cantidad_${producto.id}`).html(`${cantidad}`)
     })
 
 
     $(".aumentar_cant").on("click", (e) => {
         e.preventDefault()
-        if (producto.aumentar_cantidad(cantidad)) {
-            cantidad += 1
-            console.log(cantidad);
+        if (modelo_final == undefined) {
+            //pass
         } else {
-            cantidad = cantidad
-            console.log(cantidad);
-        }
+            cantidad= aumentar(modelo_final, cantidad)
         $(`#cantidad_${producto.id}`).html(`${cantidad}`)
+        }
     })
 
 
     $(".reducir_cant").on("click", (e) => {
         e.preventDefault()
-        if (producto.reducir_cantidad(cantidad)) {
-            cantidad -= 1
-            console.log(cantidad);
+        if (modelo_final == undefined) {
+            //pass
         } else {
-            cantidad = cantidad
-            console.log(cantidad);
+            cantidad = reducir (modelo_final, cantidad)
+            $(`#cantidad_${producto.id}`).html(`${cantidad}`)
         }
-        $(`#cantidad_${producto.id}`).html(`${cantidad}`)
     })
 
-    $(`#cantidad_${producto.id}`).bind('DOMSubtreeModified', (e) => {
-        console.log(e.target.id)
+
+    $(`#cantidad_${producto.id}`).bind('DOMSubtreeModified', () => {
         if (color === undefined || talle === undefined || cantidad === 0) {
             $(`#agregar_carrito_${producto.id}`).attr("data-bs-dismiss","none")
-            console.log($(`#agregar_carrito_${producto.id}`).data("bs-dismiss"))
         } else {
             $(`#agregar_carrito_${producto.id}`).attr("data-bs-dismiss","modal")
-            console.log($(`#agregar_carrito_${producto.id}`).data("bs-dismiss"))
         }
     })
 
     $(`#agregar_carrito_${producto.id}`).on ("click", (e) => {
         e.preventDefault();
         if (color === undefined || talle === undefined || cantidad === 0) {
-            console.log("ERROR");
+            //pass
         } else {
-            agregar_carrito(producto.id, color, talle, cantidad);
+            agregar_carrito(modelo_final, cantidad);
             show_toast(cantidad)
         }
         
     })
 }
 
+function aumentar(modelo, cantidad) {
+    if (modelo.aumentar_cantidad(cantidad)) {
+        cantidad += 1
+        return cantidad
+    } else {
+        cantidad = cantidad
+        return cantidad
+    }
+}
+
+function reducir (modelo, cantidad) {
+    if (modelo.reducir_cantidad(cantidad)) {
+        cantidad -= 1
+        return cantidad
+    } else {
+        cantidad = cantidad
+        return cantidad
+    }
+}
 
 function show_toast (cantidad) {
     let cuerpo_toast = check_cantidad_toast(cantidad)
@@ -189,11 +224,14 @@ function check_cantidad_toast (cantidad) {
 }
 
 
-function agregar_carrito(id, color, talle, cantidad) {
-    let producto_encontrar = productos.find (producto => producto.id == id)
-    let agregar = producto_encontrar.subir_a_carrito(color, talle, cantidad)
-    carrito_compras.push(agregar)
-    console.log(carrito_compras);
+function agregar_carrito(modelo, cantidad) {
+    let buscar_carrito = carrito_compras.find (producto => producto.modelo_id == modelo.modelo_id)
+    if (buscar_carrito == undefined) {
+        modelo.cantidad = cantidad
+        carrito_compras.push(modelo)
+    } else {
+        modelo.cantidad = cantidad
+    }
 }
 
 
@@ -209,7 +247,7 @@ function crear_modal_carrito(carrito) {
                                     <div class="modal-body">
                                         <div class="container-fluid">
                                             <div class="row">
-                                                <div class="col">
+                                                <div id="carrito_cuerpo" class="col">
                                                 ${cuerpo_carrito}
                                                 </div>
                                             </div>
@@ -219,16 +257,61 @@ function crear_modal_carrito(carrito) {
                                         <button class="btn btn-danger m-2 ">Confirmar Compra</button>
                                     </div>
                                 </div>`)
+
+
+    for (const producto of carrito) {
+        $(`.aumentar_${producto.modelo_id}`).on("click", (e) => {
+            e.preventDefault()
+            let producto_encontrar = modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+            producto.cantidad = aumentar(producto_encontrar, producto.cantidad)
+            $(`#${producto.modelo_id}`).html(`${producto.cantidad}`)
+        })
+    
+    
+        $(`.reducir_${producto.modelo_id}`).on("click", (e) => {
+            e.preventDefault()
+            let producto_encontrar = modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+            producto.cantidad =reducir(producto_encontrar, producto.cantidad)
+            $(`#${producto.modelo_id}`).html(`${producto.cantidad}`)
+        })
+        
+        $(`.eliminar_${producto.modelo_id}`).on("click", (e) => {
+            e.preventDefault()
+            let producto_encontrar = modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+            carrito_compras = carrito_compras.filter (modelo => modelo.modelo_id != producto_encontrar.modelo_id)
+            crear_modal_carrito(carrito_compras)
+        })
+    }
 }
 
 
 function check_cantidad_carrito(carrito) {
     let items_carrito = ""
     if (carrito.length === 0) {
-        return `<h5 class=text-center>Actualmente el Carrito esta vacio</h5>`
+        return `<h5 class="text-center">Actualmente el Carrito esta vacio</h5>`
     } else {
         for (const producto of carrito) {
-            items_carrito += `<h5>${producto.id} ${producto.producto} Color:${producto.color} Talle: ${producto.talle} Cantidad: ${producto.cantidad} Precio: $${producto.precio}</h5>\n`
+            items_carrito += `<div class="container-fluid">
+                                <div class="row justify-content-md-center text-center">
+                                    <div class="col col-lg-2 my-auto">
+                                        <h5 class="text-capitalize">${producto.modelo_id} ${producto.producto}</h5>
+                                    </div>
+                                    <div class="col col-lg-2 text-center my-auto">
+                                        <h5 class="text-capitalize">(${producto.color} - ${producto.talle})</h5>
+                                    </div>
+                                    <div class="col col-lg-2 justify-content-center my-auto">
+                                        <button href="#" class="aumentar_${producto.modelo_id} btn btn-success py-1 m-2">+</button>
+                                        <label id="${producto.modelo_id}">${producto.cantidad}</label>
+                                        <button href="#" class="reducir_${producto.modelo_id} btn btn-danger py-1 m-2">-</button>
+                                    </div>
+                                    <div class="col col-lg-2 text-center my-auto">
+                                        <h5>$${producto.precio}</h5> 
+                                    </div>
+                                    <div class="col col-lg-2 text-center my-auto">
+                                    <button href="#" class="eliminar_${producto.modelo_id} btn btn-danger py-1 m-2">X</button>
+                                    </div>
+                                </div>
+                            </div>`
         }
         return items_carrito
     }

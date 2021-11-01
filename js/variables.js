@@ -3,6 +3,10 @@
 
 const productos = [];
 
-const carrito_compras = []
+const modelos = [];
+
+let carrito_compras = []
 
 let product_id = 0
+
+let modelo_id = 0
