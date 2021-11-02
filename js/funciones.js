@@ -2,12 +2,109 @@
 
 
 function mostrar_productos (productos) {
+    let cant_paginas = Math.ceil(productos.length / len)
+    let pagina_actual = 1
+
+    mostrar_array_productos(productos)
+
+    $("#productos_mostrados .producto_creado:gt(" + (len - 1) + ")").addClass("d-none")
+
+    $("#productos_mostrados").append(`<nav aria-label="Page navigation example">
+                                        <ul id=pagination_pages class="pagination justify-content-center">
+                                            <li id="pag_prev" class="page-item disabled"><button class="page-link">Previous</button></li>
+                                            <li id="pag_1" class="page-item current_page active"><button class="page-link">1</button></li>
+                                        </ul>
+                                    </nav>`)
+
+    for (let i = 2; i <= cant_paginas; i++) {
+        $("#pagination_pages").append(`<li id="pag_${i}" class="page-item current_page"><button class="page-link">${i}</button></li>`)
+    }
+    
+    if (cant_paginas === 1) {
+        $("#pagination_pages").append(`<li id="pag_next" class="page-item disabled"><button class="page-link">Next</button></li>`)
+    } else {
+        $("#pagination_pages").append(`<li id="pag_next" class="page-item"><button class="page-link">Next</button></li>`)
+    }
+
+    $(".current_page").on("click", (e) => {
+        e.preventDefault();
+        if ($(e.currentTarget).hasClass("active")) {
+            // pass
+        } else {
+            pagina_actual = $(`#${e.currentTarget.id}`).index();
+
+            pagination_worker(pagina_actual)
+
+            $(e.currentTarget).addClass("active")
+            
+            if (pagina_actual == cant_paginas) {
+                $("#pag_next").addClass("disabled")
+            } else {
+                $("#pag_next").removeClass("disabled")
+            }
+
+            if (pagina_actual == 1) {
+                $("#pag_prev").addClass("disabled")
+            } else {
+                $("#pag_prev").removeClass("disabled")
+            }
+        }
+    })
+
+    $("#pag_next").on("click", (e) => {
+        e.preventDefault();
+        if ($(e.currentTarget).hasClass("disabled")) {
+            // pass
+        } else {
+            pagina_actual++;
+            pagination_worker(pagina_actual)
+
+            $(".pagination li:eq(" + (pagina_actual) + ")").addClass("active")
+            $("#pag_prev").removeClass("disabled")
+
+            if (pagina_actual == cant_paginas) {
+                $("#pag_next").addClass("disabled")
+            }
+        }
+    })
+
+    $("#pag_prev").on("click", (e) => {     
+        e.preventDefault();
+        if ($(e.currentTarget).hasClass("disabled")) {
+            // pass
+        } else {
+            pagina_actual--;
+            pagination_worker(pagina_actual)
+
+            $(".pagination li:eq(" + (pagina_actual) + ")").addClass("active")
+            $("#pag_next").removeClass("disabled")
+
+            if (pagina_actual == 1) {
+                $("#pag_prev").addClass("disabled")
+            }
+        }
+    })
+}
+
+function pagination_worker(pagina_actual) {
+    $(".pagination li").removeClass("active")
+    $("#productos_mostrados .producto_creado").addClass("d-none")
+
+    let gran_total = len * pagina_actual;
+
+    for (let i = gran_total - len; i < gran_total; i++) {
+        $("#productos_mostrados .producto_creado:eq(" + (i) + ")").removeClass("d-none").hide().fadeIn(1000) 
+    }
+}
+
+
+function mostrar_array_productos(productos) {
     $("#productos_mostrados").hide().fadeIn(1000) 
-    $("#productos_mostrados").append(`<h2 class="col-12 sectionArticulos__h2--format">todos los productos</h2>`)
+    $("#productos_mostrados").append(`<h2 id="tienda_seccion_titulo" class="col-12 sectionArticulos__h2--format">todos los productos</h2>`)
     for (const producto of productos) {
-        $("#productos_mostrados").append(`<div class="col-12 col-md-6 col-xl-4 d-flex justify-content-center">
+        $("#productos_mostrados").append(`<div class="producto_creado col-12 col-md-6 col-xl-4 d-flex justify-content-center">
                                             <div class="card m-5 text-center shadow-lg border border-danger" style="width: 18rem;">
-                                                <img src="../media/usuario_vacio.png" class="card-img-top" alt="...">
+                                                <img src="${producto.imagen}" class="card-img-top" alt="..." height="350px">
                                                 <div class="card-body bg-dark">
                                                     <h5 class="card-title text-uppercase text-white">${producto.producto}</h5>
                                                     <h6 class="card-text text-success">$${producto.precio}</h6>
@@ -15,7 +112,8 @@ function mostrar_productos (productos) {
                                                 </div>
                                             </div>
                                         </div>`)
-
+        
+        
 
         $(`#ver_mas_${producto.id}`).on("click", (e) => {
             e.preventDefault();
@@ -27,11 +125,12 @@ function mostrar_productos (productos) {
 function crear_modal_producto(producto) {
     let color;
     let talle;
+    let imagen = producto.imagen
     let cantidad = 0
     let options_colores = `<option selected="selected" disabled>Seleccionar...</option>\n`
     let options_talles = `<option selected="selected" disabled>Seleccionar...</option>\n`
     producto.stock = undefined
-    let modelos_modal = modelos.filter (modelo => modelo.id == producto.id)
+    let modelos_modal = my_modelos.filter (modelo => modelo.id == producto.id)
     let talles_modal;
     let modelo_final;
     const colores = []
@@ -57,8 +156,8 @@ function crear_modal_producto(producto) {
                                     <div class="modal-body">
                                         <div class="container-fluid">
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <img src="../media/usuario_vacio.png" class="card-img-top" alt="...">
+                                                <div class="col-md-6 text-center">
+                                                    <img id=imagen_${producto.id} src="${imagen}" class="border border-danger imagen_modal" alt="...">
                                                 </div>
                                                 <div class="col-md-6 text-center">
                                                     <h3 class="modal__texto--titulo text-uppercase text-danger pt-5">${producto.producto}</h3>
@@ -88,19 +187,18 @@ function crear_modal_producto(producto) {
                                                     </div>
                                                     <h4 class="pt-4 text-success modal__texto--titulo">$${producto.precio}</h4>
                                                     <div class="pt-4">
-                                                        <button href="#" class="aumentar_cant btn btn-success py-1 m-2">+</button>
+                                                        <button href="#" class="aumentar_cant btn btn-success py-1 m-2 disabled">+</button>
                                                         <label id="cantidad_${producto.id}" class="border bg-white px-2" size="1">${cantidad}</label>
-                                                        <button type="button" class="reducir_cant btn btn-danger py-1 m-2" data-bs-toggle="popover" title="Popover title" data-bs-content="wololo">-</button>
+                                                        <button type="button" class="reducir_cant btn btn-danger py-1 m-2 disabled" data-bs-toggle="popover" title="Popover title" data-bs-content="wololo">-</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer justify-content-center bg-dark">
-                                        <button href="#" id="agregar_carrito_${producto.id}" class="btn btn-danger m-2">Agregar Carrito</button>
+                                        <button href="#" id="agregar_carrito_${producto.id}" class="btn btn-danger m-2 disabled">Agregar Carrito</button>
                                     </div>
                                 </div>`)
-
 
     $(`#colores_${producto.id}`).on("change", (e) => {
         options_talles = `<option selected="selected" disabled>Seleccionar...</option>\n`
@@ -109,6 +207,8 @@ function crear_modal_producto(producto) {
         const talles = []
         modelo_final = undefined
         talles_modal = modelos_modal.filter (modelo => modelo.color == color)
+        imagen = talles_modal[0].modelo_imagen
+        $(`#imagen_${producto.id}`).attr("src", imagen)
 
         for (const modelo of talles_modal) {
             talles.push(modelo.talle)
@@ -122,6 +222,8 @@ function crear_modal_producto(producto) {
         $(`#talles_${producto.id}`).append(options_talles)
         $(`#cantidad_${producto.id}`).html(`${cantidad}`)
         producto.stock = undefined
+        $(".aumentar_cant").addClass("disabled")
+        $(".reducir_cant").addClass("disabled")
     })
 
 
@@ -130,7 +232,15 @@ function crear_modal_producto(producto) {
         talle = e.target.value;
         modelo_final = undefined
         modelo_final = talles_modal.find(producto => producto.talle == talle)
-        $(`#cantidad_${producto.id}`).html(`${cantidad}`)
+        if (modelo_final.stock === 0) {
+            $(`#cantidad_${producto.id}`).html("Sin Stock")
+            $(".aumentar_cant").addClass("disabled")
+            $(".reducir_cant").addClass("disabled")
+        } else {
+            $(`#cantidad_${producto.id}`).html(`${cantidad}`)
+            $(".aumentar_cant").removeClass("disabled")
+            $(".reducir_cant").removeClass("disabled")
+        }
     })
 
 
@@ -159,8 +269,10 @@ function crear_modal_producto(producto) {
     $(`#cantidad_${producto.id}`).bind('DOMSubtreeModified', () => {
         if (color === undefined || talle === undefined || cantidad === 0) {
             $(`#agregar_carrito_${producto.id}`).attr("data-bs-dismiss","none")
+            $(`#agregar_carrito_${producto.id}`).addClass("disabled")
         } else {
             $(`#agregar_carrito_${producto.id}`).attr("data-bs-dismiss","modal")
+            $(`#agregar_carrito_${producto.id}`).removeClass("disabled")
         }
     })
 
@@ -220,7 +332,7 @@ function check_cantidad_toast (cantidad) {
     if (cantidad === 1) {
         return `Agregaste ${cantidad} articulo de 1 producto al Carrito!`
     } else {
-        return `Agregaste ${cantidad} arituclos de 1 producto al Carrito!`
+        return `Agregaste ${cantidad} articulos de 1 producto al Carrito!`
     }
 }
 
@@ -260,7 +372,7 @@ function crear_modal_carrito(carrito) {
                                         <button id="confirmar_carrito" class="btn btn-danger m-2" data-bs-dismiss="modal">Confirmar Compra</button>
                                     </div>
                                 </div>`)
-    confirmar_cantidades()
+    confirmar_cantidades(cerrar_compra)
 
 
     $("#confirmar_carrito").on ("click", (e) => {
@@ -278,15 +390,13 @@ function crear_modal_carrito(carrito) {
             }
         }
         if (confirmar >= 1) {
-            console.log("Hay producto en 0, no se puede confirmar la compra");
+            // pass
         } else {
-            console.log("compra confirmada, gracias por elegirnos!");
             for (const producto of carrito_compras) {
-                console.log("Cantidad seleccionada: " + producto.cantidad);
-                console.log("Stock: " + producto.stock);
                 producto.stock = producto.stock - producto.cantidad;
-                console.log("Nuevo Stock: " + producto.stock);
-                
+                let producto_encontrar = my_modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+                carrito_compras = carrito_compras.filter (modelo => modelo.modelo_id != producto_encontrar.modelo_id)
+                $("#span_carrito").html(carrito_compras.length)
             }
         }
     })
@@ -295,22 +405,26 @@ function crear_modal_carrito(carrito) {
     for (const producto of carrito) {
         $(`.aumentar_${producto.modelo_id}`).on("click", (e) => {
             e.preventDefault()
-            let producto_encontrar = modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+            let producto_encontrar = my_modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
             producto.cantidad = aumentar(producto_encontrar, producto.cantidad)
             $(`#${producto.modelo_id}`).html(`${producto.cantidad}`)
+            $(`#subtotal_${producto.modelo_id}`).html(`$${producto.cantidad*producto.precio}`)
+            crear_modal_carrito(carrito_compras)
         })
     
     
         $(`.reducir_${producto.modelo_id}`).on("click", (e) => {
             e.preventDefault()
-            let producto_encontrar = modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+            let producto_encontrar = my_modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
             producto.cantidad =reducir(producto_encontrar, producto.cantidad)
             $(`#${producto.modelo_id}`).html(`${producto.cantidad}`)
+            $(`#subtotal_${producto.modelo_id}`).html(`$${producto.cantidad*producto.precio}`)
+            crear_modal_carrito(carrito_compras)
         })
         
         $(`.eliminar_${producto.modelo_id}`).on("click", (e) => {
             e.preventDefault()
-            let producto_encontrar = modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+            let producto_encontrar = my_modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
             carrito_compras = carrito_compras.filter (modelo => modelo.modelo_id != producto_encontrar.modelo_id)
             crear_modal_carrito(carrito_compras)
             $("#span_carrito").html(carrito_compras.length)
@@ -318,14 +432,14 @@ function crear_modal_carrito(carrito) {
         
         $(`#${producto.modelo_id}`).bind('DOMSubtreeModified', () => {
             cerrar_compra = 0
-            confirmar_cantidades()
+            confirmar_cantidades(cerrar_compra)
         })
     }
 }
 
 
-function confirmar_cantidades () {
-    cerrar_compra = 0
+function confirmar_cantidades (compra) {
+    cerrar_compra = compra
     if (carrito_compras.length === 0) {
         cerrar_compra +=1
     } else {
@@ -339,21 +453,27 @@ function confirmar_cantidades () {
     }
     if (cerrar_compra >= 1) {
         $("#confirmar_carrito").attr("data-bs-dismiss","none")
+        $("#confirmar_carrito").addClass("disabled")
     } else {
         $("#confirmar_carrito").attr("data-bs-dismiss","modal")
+        $("#confirmar_carrito").removeClass("disabled")
     }
 }
 
 function check_cantidad_carrito(carrito) {
     let items_carrito = ""
+    let carrito_precio_total = 0
     if (carrito.length === 0) {
-        return `<h5 class="text-center">Actualmente el Carrito esta vacio</h5>`
+        return `<h5 class="text-center py-5">Actualmente el Carrito esta vacio</h5>`
     } else {
         for (const producto of carrito) {
             items_carrito += `<div class="container-fluid">
-                                <div class="row justify-content-md-center text-center">
+                                <div class="row border justify-content-md-center text-center py-2">
+                                    <div class="col col-lg-2 text-center my-auto">
+                                        <img src="${producto.modelo_imagen}" class="imagen_carrito border border-danger" alt="...">
+                                    </div>
                                     <div class="col col-lg-2 my-auto">
-                                        <h5 class="text-capitalize">${producto.modelo_id} ${producto.producto}</h5>
+                                        <h5 class="text-capitalize">${producto.producto}</h5>
                                     </div>
                                     <div class="col col-lg-2 text-center my-auto">
                                         <h5 class="text-capitalize">(${producto.color} - ${producto.talle})</h5>
@@ -363,15 +483,34 @@ function check_cantidad_carrito(carrito) {
                                         <label id="${producto.modelo_id}">${producto.cantidad}</label>
                                         <button href="#" class="reducir_${producto.modelo_id} btn btn-danger py-1 m-2">-</button>
                                     </div>
-                                    <div class="col col-lg-2 text-center my-auto">
+                                    <div class="col col-lg-1 text-center my-auto">
                                         <h5>$${producto.precio}</h5> 
                                     </div>
-                                    <div class="col col-lg-2 text-center my-auto">
+                                    <div class="col col-lg-1 text-center my-auto">
+                                        <h5>=</h5> 
+                                    </div>
+                                    <div class="col col-lg-1 text-center my-auto">
+                                        <h5 id="subtotal_${producto.modelo_id}">$${producto.precio*producto.cantidad}</h5> 
+                                    </div>
+                                    <div class="col col-lg-1 text-center my-auto">
                                     <button href="#" class="eliminar_${producto.modelo_id} btn btn-danger py-1 m-2">X</button>
                                     </div>
                                 </div>
                             </div>`
+            carrito_precio_total += parseInt(producto.precio*producto.cantidad)
         }
+        items_carrito += `<hr>
+                            <div class="container-fluid">
+                                <div class="row border py-2 justify-content-md-end">
+                                    <div class="col col-lg-2 my-auto">
+                                        <h5> Total Carrito: </h5>
+                                    </div>
+                                    <div class="col col-lg-2 my-auto">
+                                        <h5>$${carrito_precio_total}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            `
         return items_carrito
     }
 }

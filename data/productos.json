@@ -1,56 +1,489 @@
 [
   {
+    "producto": "linea dreams",
+    "categoria": "pijama",
+    "precio": 1500,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/pijamas/Linea_Dreams/Linea_Dreams_Gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/pijamas/Linea_Dreams/Linea_Dreams_Gris.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "salmon",
+        "imagen": "../media/pijamas/Linea_Dreams/Linea_Dreams_Salmon.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 3 },
+          { "talle": "M", "stock": 6 },
+          { "talle": "S", "stock": 9 }
+        ]
+      }
+    ]
+  },
+  {
     "producto": "linea emma",
-    "categoria": "pijamas",
-    "precio": 1500,
-    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa"
-  },
-  {
-    "producto": "linea blue",
-    "categoria": "batas_monos",
+    "categoria": "pijama",
     "precio": 5000,
-    "stock": 8
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/pijamas/Linea_Emma/Linea_Emma_Gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/pijamas/Linea_Emma/Linea_Emma_Gris.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
   },
   {
-    "producto": "linea sky",
-    "categoria": "pijamas",
+    "producto": "linea love",
+    "categoria": "pijama",
     "precio": 2000,
-    "stock": 2
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/pijamas/Linea_Love/Linea_Love_Azul.jpeg",
+    "modelos": [
+      {
+        "color": "azul",
+        "imagen": "../media/pijamas/Linea_Love/Linea_Love_Azul.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
   },
   {
-    "producto": "linea retro",
-    "categoria": "camisetas",
+    "producto": "linea minnie",
+    "categoria": "pijama",
     "precio": 1800,
-    "stock": 6
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/pijamas/Linea_Minnie/Linea_Minnie_Gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/pijamas/Linea_Minnie/Linea_Minnie_Gris.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
   },
   {
-    "producto": "linea dark",
-    "categoria": "batas_monos",
+    "producto": "linea shine",
+    "categoria": "pijama",
     "precio": 4500,
-    "stock": 5
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/pijamas/Linea_Shine/Linea_Shine_Celeste.jpeg",
+    "modelos": [
+      {
+        "color": "celeste",
+        "imagen": "../media/pijamas/Linea_Shine/Linea_Shine_Celeste.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "rosa",
+        "imagen": "../media/pijamas/Linea_Shine/Linea_Shine_Rosa.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 3 },
+          { "talle": "M", "stock": 6 },
+          { "talle": "S", "stock": 9 }
+        ]
+      }
+    ]
   },
   {
-    "producto": "linea stone",
-    "categoria": "pantuflas",
+    "producto": "linea weekend",
+    "categoria": "pijama",
     "precio": 2500,
-    "stock": 2
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/pijamas/Linea_Weekend/Linea_Weekend_Gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/pijamas/Linea_Weekend/Linea_Weekend_Gris.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "verde",
+        "imagen": "../media/pijamas/Linea_Weekend/Linea_Weekend_Verde_2.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 3 },
+          { "talle": "M", "stock": 6 },
+          { "talle": "S", "stock": 9 }
+        ]
+      }
+    ]
   },
   {
-    "producto": "linea bianca",
-    "categoria": "medias",
-    "precio": 800,
-    "stock": 10
+    "producto": "camiseta termica",
+    "categoria": "camiseta",
+    "precio": 1200,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Camisetas/Camiseta_Termica/Camiseta_gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/Camisetas/Camiseta_Termica/Camiseta_gris.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
   },
   {
-    "producto": "linea black",
-    "categoria": "ropa_interior",
-    "precio": 1500,
-    "stock": 8
+    "producto": "linea raso italiano",
+    "categoria": "camison",
+    "precio": 2200,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Camisones/Linea_Raso_Italiano/Linea_Raso_Italiano_Camison_Negro.jpeg",
+    "modelos": [
+      {
+        "color": "negro",
+        "imagen": "../media/Camisones/Linea_Raso_Italiano/Linea_Raso_Italiano_Camison_Negro.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
   },
   {
-    "producto": "linea torres",
-    "categoria": "camisones",
+    "producto": "linea sweet lady",
+    "categoria": "camison",
     "precio": 2800,
-    "stock": 15
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Camisones/Linea_Sweet_Lady_Camison_Maternal/Linea_Sweet_Lady_Camison_Maternal_Gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/Camisones/Linea_Sweet_Lady_Camison_Maternal/Linea_Sweet_Lady_Camison_Maternal_Gris.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "articulo 101",
+    "categoria": "medias",
+    "precio": 1100,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Medias/Art_101N/Art_101N_Blanco.jpeg",
+    "modelos": [
+      {
+        "color": "blanco",
+        "imagen": "../media/Medias/Art_101N/Art_101N_Blanco.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "negro",
+        "imagen": "../media/Medias/Art_101N/Art_101N_Negro.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "articulo 102",
+    "categoria": "medias",
+    "precio": 1200,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Medias/Art_102N/Art_102N_Blanco.jpeg",
+    "modelos": [
+      {
+        "color": "blanco",
+        "imagen": "../media/Medias/Art_102N/Art_102N_Blanco.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "negro",
+        "imagen": "../media/Medias/Art_102N/Art_102N_Negro.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "articulo 1202",
+    "categoria": "medias",
+    "precio": 1500,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Medias/Art_1202/Art_1202_Negro.jpeg",
+    "modelos": [
+      {
+        "color": "negro",
+        "imagen": "../media/Medias/Art_1202/Art_1202_Negro.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "piel",
+        "imagen": "../media/Medias/Art_1202/Media_Lycra.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "mono verdeagua unicornio",
+    "categoria": "mono",
+    "precio": 3500,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Mono/Mono_Verdeagua/Mono_Verdeagua_entero.jpeg",
+    "modelos": [
+      {
+        "color": "verdeagua",
+        "imagen": "../media/Mono/Mono_Verdeagua/Mono_Verdeagua.jpeg",
+        "modelo": [
+          { "talle": "XL", "stock": 20 },
+          { "talle": "L", "stock": 15 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "pantuflas corderito",
+    "categoria": "pantuflas",
+    "precio": 1300,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Pantuflas/Corderito/Pantuflas_Corderito_Gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/Pantuflas/Corderito/Pantuflas_Corderito_Gris.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      },
+      {
+        "color": "negro",
+        "imagen": "../media/Pantuflas/Corderito/Pantuflas_Corderito_Negras.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "pantuflas abiertas",
+    "categoria": "pantuflas",
+    "precio": 1350,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Pantuflas/Pantuflas_Hombre/Pantuflas_Abiertas_Gris.jpeg",
+    "modelos": [
+      {
+        "color": "gris",
+        "imagen": "../media/Pantuflas/Pantuflas_Hombre/Pantuflas_Abiertas_Gris.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      },
+      {
+        "color": "negro",
+        "imagen": "../media/Pantuflas/Pantuflas_Hombre/Pantuflas_Abiertas_Negro.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "pantuflas rock",
+    "categoria": "pantuflas",
+    "precio": 1650,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Pantuflas/Rock/Pantuflas_Rock.jpeg",
+    "modelos": [
+      {
+        "color": "negro",
+        "imagen": "../media/Pantuflas/Rock/Pantuflas_Rock.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "corpiño andressa",
+    "categoria": "corpiño",
+    "precio": 1950,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Ropa_Interior/Andressa/Art_450_Nude.jpeg",
+    "modelos": [
+      {
+        "color": "nude",
+        "imagen": "../media/Ropa_Interior/Andressa/Art_450_Nude.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      },
+      {
+        "color": "negro",
+        "imagen": "../media/Ropa_Interior/Andressa/Art_450_Negro.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      },
+      {
+        "color": "blanco",
+        "imagen": "../media/Ropa_Interior/Andressa/Art_450_Blanco.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "sweet victorian art 113-09",
+    "categoria": "bombacha",
+    "precio": 2150,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Ropa_Interior/Art_113_09/Sweet_Victorian_Art_113_09_Hueso_frente.jpeg",
+    "modelos": [
+      {
+        "color": "hueso",
+        "imagen": "../media/Ropa_Interior/Art_113_09/Sweet_Victorian_Art_113_09_Hueso_frente.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      },
+      {
+        "color": "blanco",
+        "imagen": "../media/Ropa_Interior/Art_113_09/Sweet_Victorian_Art_113_09_Blanco.jpeg",
+        "modelo": [
+          { "talle": "36", "stock": 5 },
+          { "talle": "38", "stock": 10 },
+          { "talle": "40", "stock": 15 }
+        ]
+      }
+    ]
+  },
+  {
+    "producto": "bata clasica",
+    "categoria": "bata",
+    "precio": 5150,
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo, rerum optio itaque perspiciatis laborum est eaque reprehenderit ipsa",
+    "imagen": "../media/Batas/Bata_Clasica/Bata_Clasica_Azul.jpeg",
+    "modelos": [
+      {
+        "color": "azul",
+        "imagen": "../media/Batas/Bata_Clasica/Bata_Clasica_Azul.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "gris",
+        "imagen": "../media/Batas/Bata_Clasica/Bata_Clasica_Gris.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "magenta",
+        "imagen": "../media/Batas/Bata_Clasica/Bata_Clasica_Magenta.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "rojo",
+        "imagen": "../media/Batas/Bata_Clasica/Bata_Clasica_Rojo.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "rosa",
+        "imagen": "../media/Batas/Bata_Clasica/Bata_Clasica_Rosa.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      },
+      {
+        "color": "uva",
+        "imagen": "../media/Batas/Bata_Clasica/Bata_Clasica_Uva.jpeg",
+        "modelo": [
+          { "talle": "L", "stock": 5 },
+          { "talle": "M", "stock": 10 },
+          { "talle": "S", "stock": 15 }
+        ]
+      }
+    ]
   }
 ]
