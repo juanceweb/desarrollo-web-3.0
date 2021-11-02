@@ -103,8 +103,8 @@ function mostrar_array_productos(productos) {
     $("#productos_mostrados").append(`<h2 id="tienda_seccion_titulo" class="col-12 sectionArticulos__h2--format">todos los productos</h2>`)
     for (const producto of productos) {
         $("#productos_mostrados").append(`<div class="producto_creado col-12 col-md-6 col-xl-4 d-flex justify-content-center">
-                                            <div class="card m-5 text-center shadow-lg border border-danger" style="width: 18rem;">
-                                                <img src="${producto.imagen}" class="card-img-top" alt="..." height="350px">
+                                            <div class="card mb-4 text-center shadow-lg border border-danger">
+                                                <img src="${producto.imagen}" class="card-img-top" alt="..." height="250px">
                                                 <div class="card-body bg-dark">
                                                     <h5 class="card-title text-uppercase text-white">${producto.producto}</h5>
                                                     <h6 class="card-text text-success">$${producto.precio}</h6>
@@ -157,7 +157,7 @@ function crear_modal_producto(producto) {
                                                 <div class="col-md-6 text-center">
                                                     <img id=imagen_${producto.id} src="${imagen}" class="border border-danger imagen_modal" alt="...">
                                                 </div>
-                                                <div class="col-md-6 text-center">
+                                                <div class="col-lg-6 text-center">
                                                     <h3 class="modal__texto--titulo text-uppercase text-danger pt-5">${producto.producto}</h3>
                                                     <h5 class="pt-3">(${producto.categoria})</h5>
                                                     <h6 class="pt-3 fst-italic lh-sm m-2 p-2">${producto.descripcion}</h6>
@@ -467,30 +467,27 @@ function check_cantidad_carrito(carrito) {
         for (const producto of carrito) {
             items_carrito += `<div class="container-fluid">
                                 <div class="row border justify-content-md-center text-center py-2">
-                                    <div class="col col-lg-2 text-center my-auto">
+                                    <div class="col-12 col-md-2 col-lg-2 col-xl-1 text-center my-auto pb-2">
                                         <img src="${producto.modelo_imagen}" class="imagen_carrito border border-danger" alt="...">
                                     </div>
-                                    <div class="col col-lg-2 my-auto">
-                                        <h5 class="text-capitalize">${producto.producto}</h5>
+                                    <div class="col-12 col-md-10 col-lg-6 col-xl-5 my-auto">
+                                        <h5 class="text-capitalize">${producto.producto}(${producto.color} - ${producto.talle})</h5>
                                     </div>
-                                    <div class="col col-lg-2 text-center my-auto">
-                                        <h5 class="text-capitalize">(${producto.color} - ${producto.talle})</h5>
-                                    </div>
-                                    <div class="col col-lg-2 justify-content-center my-auto">
+                                    <div class="col-12 col-lg-4 col-xl-2 text-center my-auto">
                                         <button href="#" class="reducir_${producto.modelo_id} btn btn-danger py-1 m-2">-</button>
                                         <label id="${producto.modelo_id}">${producto.cantidad}</label>
                                         <button href="#" class="aumentar_${producto.modelo_id} btn btn-success py-1 m-2">+</button>
                                     </div>
-                                    <div class="col col-lg-1 text-center my-auto">
+                                    <div class="col col-md-4 col-lg-3 col-xl-1 text-center my-auto">
                                         <h5>$${producto.precio}</h5> 
                                     </div>
-                                    <div class="col col-lg-1 text-center my-auto">
+                                    <div class="col col-md-2 col-lg-2 col-xl-1 text-center my-auto">
                                         <h5>=</h5> 
                                     </div>
-                                    <div class="col col-lg-1 text-center my-auto">
+                                    <div class="col col-md-4 col-lg-3 col-xl-1 text-start my-auto">
                                         <h5 id="subtotal_${producto.modelo_id}">$${producto.precio*producto.cantidad}</h5> 
                                     </div>
-                                    <div class="col col-lg-1 text-center my-auto">
+                                    <div class="col col-md-2 col-lg-4 col-xl-1 text-center my-auto">
                                     <button href="#" class="eliminar_${producto.modelo_id} btn btn-danger py-1 m-2">X</button>
                                     </div>
                                 </div>
