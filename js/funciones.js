@@ -112,8 +112,6 @@ function mostrar_array_productos(productos) {
                                                 </div>
                                             </div>
                                         </div>`)
-        
-        
 
         $(`#ver_mas_${producto.id}`).on("click", (e) => {
             e.preventDefault();
@@ -187,9 +185,9 @@ function crear_modal_producto(producto) {
                                                     </div>
                                                     <h4 class="pt-4 text-success modal__texto--titulo">$${producto.precio}</h4>
                                                     <div class="pt-4">
-                                                        <button href="#" class="aumentar_cant btn btn-success py-1 m-2 disabled">+</button>
+                                                        <button href="#" class="reducir_cant btn btn-danger py-1 m-2 disabled">-</button>
                                                         <label id="cantidad_${producto.id}" class="border bg-white px-2" size="1">${cantidad}</label>
-                                                        <button type="button" class="reducir_cant btn btn-danger py-1 m-2 disabled" data-bs-toggle="popover" title="Popover title" data-bs-content="wololo">-</button>
+                                                        <button href="#" class="aumentar_cant btn btn-success py-1 m-2 disabled">+</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -479,9 +477,9 @@ function check_cantidad_carrito(carrito) {
                                         <h5 class="text-capitalize">(${producto.color} - ${producto.talle})</h5>
                                     </div>
                                     <div class="col col-lg-2 justify-content-center my-auto">
-                                        <button href="#" class="aumentar_${producto.modelo_id} btn btn-success py-1 m-2">+</button>
-                                        <label id="${producto.modelo_id}">${producto.cantidad}</label>
                                         <button href="#" class="reducir_${producto.modelo_id} btn btn-danger py-1 m-2">-</button>
+                                        <label id="${producto.modelo_id}">${producto.cantidad}</label>
+                                        <button href="#" class="aumentar_${producto.modelo_id} btn btn-success py-1 m-2">+</button>
                                     </div>
                                     <div class="col col-lg-1 text-center my-auto">
                                         <h5>$${producto.precio}</h5> 
