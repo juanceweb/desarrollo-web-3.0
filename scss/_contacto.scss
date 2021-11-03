@@ -14,6 +14,7 @@
       color: white;
       margin: 0.5em;
       textarea {
+        color: black;
         margin: 0.5rem 5% 0.5rem 5%;
         width: 90%;
       }
@@ -22,7 +23,18 @@
         grid-template-columns: 1fr;
         padding: 0.5rem;
         text-align: center;
-        color: black;
+      }
+      .control_input {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1, auto);
+        padding: 0.2rem 2rem;
+        margin: 1rem;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
       }
       div {
         display: grid;
@@ -32,15 +44,9 @@
         padding: 0.5rem;
         grid-row-gap: 0.5rem;
         color: black;
-        input {
-          width: 75%;
-        }
       }
-      div label {
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 1.4rem;
+      input {
+        width: 75%;
       }
       article label {
         color: white;
@@ -70,6 +76,7 @@
         font-size: 1.5rem;
         font-weight: bold;
         width: 8rem;
+        margin-bottom: 1rem;
         background: linear-gradient(
           0deg,
           rgba(153, 51, 51, 0.6),
@@ -85,6 +92,7 @@
     }
     .contacto__formulario--bg {
       background-image: url(../media/background_contacto.jpg);
+      background-color: grey;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -109,4 +117,17 @@
   display: flex;
   justify-content: center;
   padding: 0.5rem;
+}
+
+.success {
+  border-color: #09c372;
+}
+
+.error {
+  border: 2px solid #ff3860;
+  border-radius: 4px;
+}
+
+.error2 {
+  color: #ff3860;
 }

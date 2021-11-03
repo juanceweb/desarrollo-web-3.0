@@ -223,7 +223,8 @@
     cursor: pointer;
     width: 10rem;
     text-transform: uppercase;
-    border-radius: 4rem; }
+    border-radius: 4rem;
+    grid-area: unirse; }
   .form .form__btn:hover {
     background-color: #6b1010; }
   .form .form__btn--color {
@@ -232,14 +233,35 @@
     background: linear-gradient(to top, #6b1010, #ad3973);
     font-weight: bold;
     padding: 0.2rem;
+    margin-top: 0.5rem;
+    width: 18rem;
     border-radius: 0.2rem;
     outline: none;
-    border: 2px solid #640909; }
+    border: 2px solid #640909;
+    grid-area: email; }
   .form .form__mail--color {
     color: white; }
 
 .bgGradient {
   background: linear-gradient(to top, #6b1010, #ad3973); }
+
+.contenedor_email {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "email" "unirse";
+  grid-template-columns: 100%; }
+  @media screen and (min-width: 576px) {
+    .contenedor_email {
+      grid-template-areas: "contact map";
+      grid-template-columns: 70% 30%; } }
+
+.registracion_ok {
+  display: flex;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  color: #ffd7de;
+  padding-top: 1rem;
+  justify-content: center; }
 
 /* ----------------------------*/
 /* ------- CATEGORIAS----------*/
@@ -571,14 +593,25 @@ footer {
       color: white;
       margin: 0.5em; }
       .sectionContacto .contacto .contacto__formulario textarea {
+        color: black;
         margin: 0.5rem 5% 0.5rem 5%;
         width: 90%; }
       .sectionContacto .contacto .contacto__formulario article {
         display: grid;
         grid-template-columns: 1fr;
         padding: 0.5rem;
+        text-align: center; }
+      .sectionContacto .contacto .contacto__formulario .control_input {
+        display: grid;
         text-align: center;
-        color: black; }
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1, auto);
+        padding: 0.2rem 2rem;
+        margin: 1rem;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem; }
       .sectionContacto .contacto .contacto__formulario div {
         display: grid;
         text-align: center;
@@ -587,13 +620,8 @@ footer {
         padding: 0.5rem;
         grid-row-gap: 0.5rem;
         color: black; }
-        .sectionContacto .contacto .contacto__formulario div input {
-          width: 75%; }
-      .sectionContacto .contacto .contacto__formulario div label {
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 1.4rem; }
+      .sectionContacto .contacto .contacto__formulario input {
+        width: 75%; }
       .sectionContacto .contacto .contacto__formulario article label {
         color: white;
         font-weight: bold; }
@@ -615,6 +643,7 @@ footer {
         font-size: 1.5rem;
         font-weight: bold;
         width: 8rem;
+        margin-bottom: 1rem;
         background: linear-gradient(0deg, rgba(153, 51, 51, 0.6), rgba(129, 7, 7, 0.4)); }
         @media screen and (min-width: 768px) {
           .sectionContacto .contacto .contacto__formulario .boton2 {
@@ -623,6 +652,7 @@ footer {
         background-color: chocolate; }
     .sectionContacto .contacto .contacto__formulario--bg {
       background-image: url(../media/background_contacto.jpg);
+      background-color: grey;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -642,6 +672,16 @@ footer {
   display: flex;
   justify-content: center;
   padding: 0.5rem; }
+
+.success {
+  border-color: #09c372; }
+
+.error {
+  border: 2px solid #ff3860;
+  border-radius: 4px; }
+
+.error2 {
+  color: #ff3860; }
 
 /* ----------------------------*/
 /* ------- POLITICA------------*/

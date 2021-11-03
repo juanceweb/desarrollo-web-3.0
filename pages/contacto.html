@@ -50,15 +50,19 @@
 
     <div class="sectionContacto bg-danger">
         <article class=contacto>
-            <form class="contacto__formulario contacto__formulario--bg" action="envio.php" method="post">
+            <form id="form_contacto" class="contacto__formulario contacto__formulario--bg" action="envio.php" method="post">
                     <h3 class="informacion px-1">CONTACTO</h3>
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" name="nombre" placeholder="Nombre">
-                        <label>Apellido</label>
-                        <input type="text" name="apellido" placeholder="Apellido">
-                        <label>Email</label>
-                        <input type="email" name="email" placeholder="mail@ejemplo.com">
+                    <div class="control_input">
+                        <label for="nombre_usuario">Nombre</label>
+                        <input id="nombre_usuario" type="text" name="nombre_usuario" placeholder="Nombre">
+                    </div>
+                    <div class="control_input">
+                        <label for="apellido_usuario">Apellido</label>
+                        <input id="apellido_usuario" type="text" name="apellido_usuario" placeholder="Apellido">
+                    </div>
+                    <div class="control_input">
+                        <label for="email_usuario">Email</label>
+                        <input id="email_usuario" type="text" name="email_usuario" placeholder="mail@ejemplo.com">
                     </div>
                     <h3 class=informacion>RAZON DE CONTACTO</h3>
                     <div id=select>
@@ -69,7 +73,7 @@
                         </select>
                     </div>
                     <h3 class=informacion>MENSAJE</h3>
-                        <textarea class=mensajeTexto rows="10" placeholder="Ingrese su mensaje aqui"></textarea>
+                    <textarea id="texto_usuario" rows="10" placeholder="Ingrese su mensaje aqui"></textarea>
                     <h3 class=informacion>INFORMACION</h3>
                     <article>
                         <label for="1">Acepto recibir mails o notificaciones en el futuro
@@ -117,7 +121,8 @@
     <script src="../js/clases.js"></script>
     <script src="../js/funciones.js"></script>
     <script src="../js/eventos.js"></script>
-    <script src="../js/main.js "></script>
+    <script src="../js/form_contacto.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 </html>

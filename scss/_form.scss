@@ -27,6 +27,7 @@
     width: 10rem;
     text-transform: uppercase;
     border-radius: 4rem;
+    grid-area: unirse;
   }
   .form__btn:hover {
     background-color: rgb(107, 16, 16);
@@ -38,9 +39,12 @@
     background: linear-gradient(to top, rgb(107, 16, 16), rgb(173, 57, 115));
     font-weight: bold;
     padding: 0.2rem;
+    margin-top: 0.5rem;
+    width: 18rem;
     border-radius: 0.2rem;
     outline: none;
     border: 2px solid rgba(100, 9, 9, 1);
+    grid-area: email;
   }
   .form__mail--color {
     color: white;
@@ -49,4 +53,24 @@
 
 .bgGradient {
   background: linear-gradient(to top, rgb(107, 16, 16), rgb(173, 57, 115));
+}
+
+.contenedor_email {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "email" "unirse";
+  grid-template-columns: 100%;
+  @media screen and (min-width: 576px) {
+    grid-template-areas: "contact map";
+    grid-template-columns: 70% 30%;
+  }
+}
+
+.registracion_ok {
+  display: flex;
+  font-size: 2rem;
+  font-family: $fontRara;
+  color: rgb(255, 215, 222);
+  padding-top: 1rem;
+  justify-content: center;
 }

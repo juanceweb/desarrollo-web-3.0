@@ -12,3 +12,4 @@ let product_id = 0
 let modelo_id = 0
 
 const len = 6
+

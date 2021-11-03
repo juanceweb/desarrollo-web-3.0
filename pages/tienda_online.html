@@ -54,15 +54,18 @@
     </header>
     
     <section class="form bgGradient">
-        <form action="envio.php" method="post">
+        <form id="form_reg" action="/" method="post">         
             <h3>sumate a nuestra comunidad</h3>
             <p>Con tu registro accedes a descuentos y futuras promociones!</p>
-            <label>
-                <input class="form__mail form__input--color" type="email" name="email" placeholder="mail@algo.com" size=30>
-            </label>
-            <label>
-                <input class="form__btn form__btn--color" type="submit" value="Unirse">
-            </label>            
+            <div class="contenedor_email">
+                <label>
+                    <input id="email_reg" class="form__mail form__input--color" type="text" placeholder="mail@algo.com">
+                    <div class="error2"></div>
+                </label>
+                <label>
+                    <input class="form__btn form__btn--color" type="submit" value="Unirse">
+                </label>
+            </div>            
         </form>
     </section>
 
@@ -124,7 +127,8 @@
     <script src="../js/clases.js"></script>
     <script src="../js/funciones.js"></script>
     <script src="../js/eventos.js"></script>
-    <script src="../js/main.js "></script>
+    <script src="../js/form_registro.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 </html>

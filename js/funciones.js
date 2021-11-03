@@ -329,10 +329,10 @@ function show_toast (cantidad) {
 function check_cantidad_toast (cantidad) {
     if (cantidad === 1) {
         return `Agregaste ${cantidad} articulo de 1 producto al Carrito!`
-    } if (cantidad > 1) {
+    } else if (cantidad > 1) {
         return `Agregaste ${cantidad} articulos de 1 producto al Carrito!`
-    } if (cantidad === "compra") {
-        return `Gracias por su Compra!!`
+    } else {
+        return cantidad
     }
 }
 
@@ -401,7 +401,7 @@ function crear_modal_carrito(carrito) {
                 $("#span_carrito").html(carrito_compras.length)
             }
             localStorage.setItem("carrito", JSON.stringify(carrito_compras))
-            show_toast("compra")
+            show_toast("Gracias por su Compra!!")
         }
     })
 
