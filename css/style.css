@@ -819,6 +819,18 @@ footer {
   font-size: 2.5rem;
   font-weight: bold; }
 
+@media screen and (min-width: 400px) {
+  .modal__productos .modal_color {
+    display: flex;
+    justify-content: end; } }
+
+.modal__productos .modal_select {
+  text-align: center;
+  margin-left: 2rem; }
+  @media screen and (min-width: 400px) {
+    .modal__productos .modal_select {
+      margin-left: 0rem; } }
+
 .modal-body {
   background-image: url(../media/spring.png); }
 
@@ -844,8 +856,16 @@ footer {
   height: 6rem; }
 
 .imagen_modal {
-  width: 25rem;
-  height: 32rem; }
+  width: 15rem;
+  height: 20rem; }
+  @media screen and (min-width: 390px) {
+    .imagen_modal {
+      width: 20rem;
+      height: 25rem; } }
+  @media screen and (min-width: 576px) {
+    .imagen_modal {
+      width: 25rem;
+      height: 32rem; } }
 
 /* ----------------------------*/
 /* ------- BOOTSTRAP ----------*/

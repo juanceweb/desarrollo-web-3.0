@@ -163,20 +163,20 @@ function crear_modal_producto(producto) {
                                                     <h6 class="pt-3 fst-italic lh-sm m-2 p-2">${producto.descripcion}</h6>
                                                     <div class="container">
                                                         <div class="row pt-3">
-                                                            <div class="col d-flex justify-content-end">
+                                                            <div class="col modal_color justify-content-end">
                                                                 <h5 class="modal__productos--titulo m-2 me-4 text-danger">Color:</h5>
                                                             </div>
-                                                            <div class="col py-1 d-flex justify-content-start">
+                                                            <div class="col py-1 modal_select justify-content-start">
                                                                 <select class="my-1 me-5" id=colores_${producto.id}>
                                                                 ${options_colores}
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="row pt-3">
-                                                            <div class="col d-flex justify-content-end">
+                                                            <div class="col modal_color">
                                                                 <h5 class="modal__productos--titulo my-2 me-4 text-danger">Talle:</h5>
                                                             </div>
-                                                            <div class="col py-1 d-flex justify-content-start">
+                                                            <div class="col py-1 modal_select">
                                                                 <select class="my-1 me-5" id=talles_${producto.id}>
                                                                 ${options_talles}
                                                                 </select>
@@ -342,8 +342,9 @@ function agregar_carrito(modelo, cantidad) {
         carrito_compras.push(modelo)
         $("#span_carrito").html(carrito_compras.length)
     } else {
-        modelo.cantidad = cantidad
+        buscar_carrito.cantidad = cantidad
     }
+    localStorage.setItem("carrito", JSON.stringify(carrito_compras))
 }
 
 
@@ -391,11 +392,16 @@ function crear_modal_carrito(carrito) {
             // pass
         } else {
             for (const producto of carrito_compras) {
-                producto.stock = producto.stock - producto.cantidad;
+                
                 let producto_encontrar = my_modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
+                console.log("Stock: " + producto_encontrar.stock);
+                console.log("Cant: " + producto.cantidad);
+                producto_encontrar.stock = producto_encontrar.stock - producto.cantidad
+                console.log("Nuevo Stock: " + producto_encontrar.stock);
                 carrito_compras = carrito_compras.filter (modelo => modelo.modelo_id != producto_encontrar.modelo_id)
                 $("#span_carrito").html(carrito_compras.length)
             }
+            localStorage.setItem("carrito", JSON.stringify(carrito_compras))
         }
     })
 
@@ -407,6 +413,7 @@ function crear_modal_carrito(carrito) {
             producto.cantidad = aumentar(producto_encontrar, producto.cantidad)
             $(`#${producto.modelo_id}`).html(`${producto.cantidad}`)
             $(`#subtotal_${producto.modelo_id}`).html(`$${producto.cantidad*producto.precio}`)
+            localStorage.setItem("carrito", JSON.stringify(carrito_compras))
             crear_modal_carrito(carrito_compras)
         })
     
@@ -417,6 +424,7 @@ function crear_modal_carrito(carrito) {
             producto.cantidad =reducir(producto_encontrar, producto.cantidad)
             $(`#${producto.modelo_id}`).html(`${producto.cantidad}`)
             $(`#subtotal_${producto.modelo_id}`).html(`$${producto.cantidad*producto.precio}`)
+            localStorage.setItem("carrito", JSON.stringify(carrito_compras))
             crear_modal_carrito(carrito_compras)
         })
         
@@ -425,6 +433,7 @@ function crear_modal_carrito(carrito) {
             let producto_encontrar = my_modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
             carrito_compras = carrito_compras.filter (modelo => modelo.modelo_id != producto_encontrar.modelo_id)
             crear_modal_carrito(carrito_compras)
+            localStorage.setItem("carrito", JSON.stringify(carrito_compras))
             $("#span_carrito").html(carrito_compras.length)
         }) 
         
