@@ -73,7 +73,7 @@
 .moveLeft {
   position: relative;
   animation-name: Left;
-  animation-duration: 4s; }
+  animation-duration: 6s; }
 
 @keyframes Right {
   0% {
@@ -86,7 +86,7 @@
 .moveRight {
   position: relative;
   animation-name: Right;
-  animation-duration: 4s; }
+  animation-duration: 6s; }
 
 /* ----------------------------*/
 /* ---------- 404 -------------*/

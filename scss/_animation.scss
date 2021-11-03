@@ -34,7 +34,7 @@
 .moveLeft {
   position: relative;
   animation-name: Left;
-  animation-duration: 4s;
+  animation-duration: 6s;
 }
 
 @keyframes Right {
@@ -51,5 +51,5 @@
 .moveRight {
   position: relative;
   animation-name: Right;
-  animation-duration: 4s;
+  animation-duration: 6s;
 }

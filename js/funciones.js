@@ -329,8 +329,10 @@ function show_toast (cantidad) {
 function check_cantidad_toast (cantidad) {
     if (cantidad === 1) {
         return `Agregaste ${cantidad} articulo de 1 producto al Carrito!`
-    } else {
+    } if (cantidad > 1) {
         return `Agregaste ${cantidad} articulos de 1 producto al Carrito!`
+    } if (cantidad === "compra") {
+        return `Gracias por su Compra!!`
     }
 }
 
@@ -392,16 +394,14 @@ function crear_modal_carrito(carrito) {
             // pass
         } else {
             for (const producto of carrito_compras) {
-                
                 let producto_encontrar = my_modelos.find (modelo => modelo.modelo_id == producto.modelo_id)
-                console.log("Stock: " + producto_encontrar.stock);
-                console.log("Cant: " + producto.cantidad);
+                
                 producto_encontrar.stock = producto_encontrar.stock - producto.cantidad
-                console.log("Nuevo Stock: " + producto_encontrar.stock);
                 carrito_compras = carrito_compras.filter (modelo => modelo.modelo_id != producto_encontrar.modelo_id)
                 $("#span_carrito").html(carrito_compras.length)
             }
             localStorage.setItem("carrito", JSON.stringify(carrito_compras))
+            show_toast("compra")
         }
     })
 
@@ -516,5 +516,74 @@ function check_cantidad_carrito(carrito) {
                             </div>
                             `
         return items_carrito
+    }
+}
+
+function buscar_categoria(id) {
+    let encontrado;
+
+    switch (id) {
+        case "camisones":
+            encontrado = my_productos.filter (producto => producto.categoria === "camison")
+            $("#productos_mostrados").empty()
+            mostrar_productos(encontrado)
+            $("#tienda_seccion_titulo").html("camisones")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
+
+        case "pijamas":
+            encontrado = my_productos.filter (producto => producto.categoria === "pijama")
+            $("#productos_mostrados").empty()
+            mostrar_productos(encontrado)
+            $("#tienda_seccion_titulo").html("pijamas")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
+
+        case "batas_monos":
+            encontrado = my_productos.filter (producto => producto.categoria === "bata" || producto.categoria === "mono")
+            $("#productos_mostrados").empty()
+            mostrar_productos(encontrado)
+            $("#tienda_seccion_titulo").html("batas/monos")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
+
+        case "camisetas":
+            encontrado = my_productos.filter (producto => producto.categoria === "camiseta")
+            $("#productos_mostrados").empty()
+            mostrar_productos(encontrado)
+            $("#tienda_seccion_titulo").html("camisetas")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
+
+        case "ropa_interior":
+            encontrado = my_productos.filter (producto => producto.categoria === "corpiño" || producto.categoria === "bombacha")
+            $("#productos_mostrados").empty()
+            mostrar_productos(encontrado)
+            $("#tienda_seccion_titulo").html("ropa interior")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
+
+        case "medias":
+            encontrado = my_productos.filter (producto => producto.categoria === "medias")
+            $("#productos_mostrados").empty()
+            mostrar_productos(encontrado)
+            $("#tienda_seccion_titulo").html("medias")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
+        
+        case "pantuflas":
+            encontrado = my_productos.filter (producto => producto.categoria === "pantuflas")
+            $("#productos_mostrados").empty()
+            mostrar_productos(encontrado)
+            $("#tienda_seccion_titulo").html("pantuflas")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
+
+        default:
+            $("#productos_mostrados").empty()
+            mostrar_productos(my_productos)
+            $("#tienda_seccion_titulo").html("todos los productos")
+            localStorage.setItem("categoria", JSON.stringify(id))
+            break;
     }
 }

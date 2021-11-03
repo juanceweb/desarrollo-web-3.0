@@ -14,6 +14,14 @@
 
 <body>
 
+    <div id="live_toast" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-2" aria-labelledby="modal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" id=modal_carrito>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html"> <img src="./media/logo_borde.png" alt="logo mariamaria"></a>
@@ -92,18 +100,18 @@
             <div class="col">
                 <div class="card shadow-lg border border-2 border-danger">
                     <img src="./media/categorias_camiseta.jpg" class="card-img-top" alt="camisetas categoria">
-                    <h5 class="card__text--position">Camisetas</h5>
+                    <h5 class="card__text--position">Tienda</h5>
                     <div class="card-body text-center">
-                        <a class="btn btn-danger btn-lg" href="/pages/tienda_online.html">Ver Mas</a>
+                        <a id="todos_productos" class="btn btn-danger btn-lg boton_ver_mas_inicio" href="/pages/tienda_online.html#contenedor_productos">Ver Mas</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card shadow-lg border border-2 border-danger">
                     <img src="./media/categorias_corpiños.jpg" class="card-img-top" alt="categorias corpiño">
-                    <h5 class="card__text--position">Lenceria</h5>
+                    <h5 class="card__text--position">Ropa Interior</h5>
                     <div class="card-body text-center">
-                        <a class="btn btn-danger btn-lg" href="/pages/tienda_online.html">Ver Mas</a>
+                        <a id="ropa_interior" class="btn btn-danger btn-lg boton_ver_mas_inicio" href="/pages/tienda_online.html#contenedor_productos">Ver Mas</a>
                     </div>
                 </div>
             </div>
@@ -112,7 +120,7 @@
                     <img src="./media/categorias_batas.jpg" class="card-img-top" alt="categorias batas">
                     <h5 class="card__text--position">Batas</h5>
                     <div class="card-body text-center">
-                        <a class="btn btn-danger btn-lg" href="/pages/tienda_online.html">Ver Mas</a>
+                        <a id="batas_monos" class="btn btn-danger btn-lg boton_ver_mas_inicio" href="/pages/tienda_online.html#contenedor_productos">Ver Mas</a>
                     </div>
                 </div>
             </div>
@@ -143,7 +151,13 @@
         </ul>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/variables.js"></script>
+    <script src="./js/clases.js"></script>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/eventos.js"></script>
+    <script src="./js/main.js "></script>
 
 </body>
 

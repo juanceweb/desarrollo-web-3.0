@@ -13,6 +13,19 @@
 </head>
 <body>
 
+    <div id="live_toast" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    </div>
+
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" id=modal_productos>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-2" aria-labelledby="modal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" id=modal_carrito>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html"> <img src="../media/logo_borde.png" alt="logo mariamaria"></a>
@@ -74,7 +87,7 @@
             </div>
         </nav>
         <div class="sectionArticulos tienda__aside--pro">
-            <div class=container>
+            <div id=contenedor_productos class="container">
                 <div id="productos_mostrados" class="row">
                 </div>            
             </div>
@@ -104,20 +117,6 @@
             <li class="footerNav__formato footerNav__formato--font noRightBorder"><a href="terminos_y_condiciones.html" target="_blank">Terminos y condiciones</a></li>
         </ul>
     </footer>
-
-    <div id="live_toast" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-    </div>
-
-
-    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered" id=modal_productos>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal2" tabindex="-2" aria-labelledby="modal2" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered" id=modal_carrito>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
