@@ -1,6 +1,6 @@
 
 
-
+// CLASE PRODUCTO
 class Producto {
     constructor (producto, categoria, precio, descripcion, imagen, modelos) {
     product_id += 100;
@@ -14,6 +14,7 @@ class Producto {
     this.prod_modelos = modelos
     this.cantidad = 0
     
+    // POR CADA PRODUCTO, SE CREA UN OBJETO DE LA CLASE MODELO POR CADA MODELO DISTINTO DE ESE PRODUCTO (COLOR Y TALLE)
     for (const objeto of this.prod_modelos) {
         for (const modelo of objeto.modelo) {
             modelo_id ++
@@ -23,7 +24,7 @@ class Producto {
     }
 }
 
-
+// CLASE MODELO, COMPARTE EL ID DEL PRODUCTO QUE LO CREO, PERO CADA MODELO TIENE UN SUB ID PROPIO
 class Modelo {
     constructor (id, id_modelo, producto, categoria, descripcion, precio, color, imagen, talle, stock, cantidad) {
     
@@ -40,6 +41,7 @@ class Modelo {
     this.cantidad = cantidad
     }
 
+    // METODO QUE AUMENTA LA CANTIDAD SELECCIONADA, SI HAY STOCK PARA ESE MODELO DISPONIBLE, SINO LA CANTIDAD NO CAMBIA
     aumentar_cantidad(cantidad) {
         if (cantidad === this.stock || this.stock === undefined) {
             return false
@@ -48,6 +50,7 @@ class Modelo {
         }
     }
 
+    // METODO QUE REDUCE LA CANTIDAD SELECCIONADA, NO BAJA MAS DE 0
     reducir_cantidad(cantidad) {
         if (cantidad === 0 || this.stock === undefined) {
             return false
